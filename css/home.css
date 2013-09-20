@@ -1,0 +1,11 @@
+
+/* 
+	Home page CSS for sreenaths.com
+*/
+
+.paralax-container{
+	height: 600px;
+}
+.paralax-container img{
+	position: absolute;
+}

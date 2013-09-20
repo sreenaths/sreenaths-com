@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Header on Scroll with jQuery</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery.min.js"></script>
+    <script src="waypoints.js"></script>
+    <script src="waypoints-sticky.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sticky-navigation').waypoint('sticky');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Your Header Here</div>
+        <div class="sticky-navigation">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            Scroll Down
+            <br /><br /><br /><br />
+            Scroll Down
+            <br /><br /><br /><br />
+            Scroll Down
+            <br /><br /><br /><br />
+            Scroll Down
+            <br /><br /><br /><br />
+            Scroll Down
+            <br /><br /><br /><br />
+            Scroll Down
+            <br /><br /><br /><br />
+        </div>
+        <div class="footer">
+        Your footer here
+        </div>
+    </div>
+</body>
+</html>

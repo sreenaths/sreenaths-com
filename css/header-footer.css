@@ -1,0 +1,48 @@
+
+/* 
+	Header & Footer CSS for sreenaths.com
+*/
+
+.header{
+	padding-top: 45px;
+	height: 45px;
+	background: url('/images/bg-header.jpg');
+}
+
+.header .logo{
+	margin-top: -32px;
+	background: url("/images/ss.png");
+	width: 64px;
+	height: 64px;
+	float: left;
+}
+
+.header-link{
+	font-size: 18px;
+}
+
+.header .title{
+	float: left;
+	font-size: 40px;
+	color: #FFFFFF;
+	margin-top: -20px;
+	margin-left: 10px;
+	font-family: verdana;
+}
+
+.footer{
+	padding-top: 48px;
+	height: 45px;
+	background: url('/images/bg-footer.jpg');
+	border-top: 1px solid;
+	border-color: #AAAAAA;
+}
+
+.footer .inline-block{
+	height: 40px;
+}
+
+.footer .small-text{
+	margin-top: -7.5px;
+	float: left;
+}
