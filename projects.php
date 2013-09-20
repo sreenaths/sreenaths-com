@@ -32,6 +32,7 @@
 
 	<div class="center inner-shade bg1">
 		
+		<?/*
 		<div class="tag-bar">
 			<div id="sticky-bar" class="tag-bar">
 				<div class="inline-block v-padding">
@@ -50,6 +51,7 @@
 				</div>
 			</div>
 		</div>
+		*/?>
 
 		<ul class="projects-list">
 
@@ -110,16 +112,16 @@
 									<?
 											}
 											echo("</div>");
-										} else {
+										} else if(false){
 									?>
-										<div class="description" ><?=$project["description"]?></div>
+										<div class="description" style="padding-top:10px;text-indent:50px;" ><?=$project["description"]?></div>
 									<? } ?>
 								
 								</div>
 							</div>
 
-							<? if( $showScreens ){ ?>
-								<div class="description" ><?=$project["description"]?></div>
+							<? if( true||$showScreens ){ ?>
+								<div class="description" style="padding-top:10px;text-indent:50px;" ><?=$project["description"]?></div>
 							<? } ?>
 
 						</div>
