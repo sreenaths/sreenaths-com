@@ -12,7 +12,7 @@
 
 	<div class="grey-gradiant-half center">
 		<div class="inline-block v-padding-2x">
-			<div class=float>
+			<div class=float-left>
 				<div class=heading>Contact Me</div>
 				<div class=sub-heading style="width:400px;">Want to team up and create someting great, let's get in touch!</div>
 

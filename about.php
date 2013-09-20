@@ -12,7 +12,7 @@
 
 	<div class="grey-gradiant-half center">
 		<div class="inline-block v-padding-2x">
-			<div class=float>
+			<div class=float-left>
 				<div class=heading>About Me</div>
 				<div class=sub-heading style="width:480px;">Software Engineer, Design and Technology Enthusiast from Bangalore, India.</div>
 				<div class="description" style="width:480px;font-size:14px;">
