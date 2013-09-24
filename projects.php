@@ -65,10 +65,10 @@
 
 								<? if($project["link"]){ ?>
 									<a href="<?=$project["link"]?>">
-										<img class="rounded main-image" src="<?=$project["image"]?>"/>
+										<div class="rounded main-image" style="background-image:url(<?=$project["image"]?>);" ></div>
 									</a>
 								<? } else { ?>
-									<img class="rounded main-image" src="<?=$project["image"]?>"/>
+										<div class="rounded main-image" style="background-image:url(<?=$project["image"]?>);" ></div>
 								<? } ?>
 
 								<div class="details-container">
@@ -108,20 +108,22 @@
 											echo("<div class=gallery-wrapper>");
 											foreach( $project["screens"] as $screen ){
 									?>
-												<img class=rounded src="<?=$screen.'t.jpg'?>"/>
+												<a href="<?=$screen?>.jpg" data-lightbox="<?=$project['id']?>" title="<?=$project['displayName']?>">
+													<div class="rounded gallery-thumb" style="background-image:url(<?=$screen?>t.jpg);" ></div>
+												</a>
 									<?
 											}
 											echo("</div>");
 										} else if(false){
 									?>
-										<div class="description" style="padding-top:10px;text-indent:50px;" ><?=$project["description"]?></div>
+										<div class="description"><?=$project["description"]?></div>
 									<? } ?>
 								
 								</div>
 							</div>
 
 							<? if( true||$showScreens ){ ?>
-								<div class="description" style="padding-top:10px;text-indent:50px;" ><?=$project["description"]?></div>
+								<div class="description" ><?=$project["description"]?></div>
 							<? } ?>
 
 						</div>

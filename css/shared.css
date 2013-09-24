@@ -9,7 +9,10 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300);
 
 /* --- Overrides --- */
-body{ margin: 0px; }
+body{ 
+	min-width: 1044px;
+	margin: 0px;
+}
 
 a:hover, a:visited, a:link, a:active{
 	font-family: 'Istok Web', sans-serif;

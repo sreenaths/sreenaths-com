@@ -40,21 +40,22 @@
 .project .float{
 	width: 1024px;
 }
-.project img.rounded{
+.project div.rounded{
 	border-radius: 10px;
 	border: 1px solid #333;
 }
-.project a img.rounded:hover{
+.project a div.rounded:hover{
 	opacity:0.8;
 	filter:alpha(opacity=80);
 }
-.project img.small-icon{
+.project div.small-icon{
 	margin-left: 5px;
 	margin-top: 5px;
 }
 .project .main-image{
 	float: left;
-	width: 160px;
+	width:160px;
+	height:160px;
 }
 .project .details-container{
 	float: left;
@@ -69,10 +70,15 @@
 	font-size: 24px;
 }
 .project .details-container .title img{
-	margin-top: ;
+	margin-top: 5px;
 }
 .project .details-container .gallery-wrapper{
 	margin-top: 2px;
+}
+.project .details-container .gallery-wrapper .gallery-thumb{
+	display:inline-block;
+	width:64px;
+	height:64px;
 }
 .project .details-container .title a{
 /*	float: left; */
@@ -90,6 +96,8 @@
 }
 .project .description{
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 25px;
 	color: #555555;
+	padding-top:10px;
+	text-indent:50px;
 }
