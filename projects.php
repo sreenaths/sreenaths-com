@@ -76,11 +76,14 @@
 									<div class="title" >
 
 										<? if($project["link"]){ ?>
-											<a class="hover-black" href="<?=$project["link"]?>"> <?=$project["displayName"]?> <img src="/images/link.png"></a>
+											<a class="hover-black" href="<?=$project["link"]?>"> <?=$project["displayName"]?></a>
 										<? } else { ?>
 											<?=$project["displayName"]?>
 										<? } ?>
 
+										<? if($project["git"]){ ?>
+											<a class="hover-black" href="<?=$project["git"]?>"> <img src="/images/git.png"/></a>
+										<? } ?>
 
 										<div class="tags">
 											<?
