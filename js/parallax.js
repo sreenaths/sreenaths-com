@@ -7,6 +7,12 @@ function initiateImgParallax( container ){
 
 	var images = container.find('img');
 
+	function isMobile(){
+		return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)));
+	}
+
+	if( isMobile() ) return;
+
 	// -- Set items to the expected conf if js is enabled ---
 	images.each( function( index, image ){
 
@@ -35,10 +41,6 @@ function initiateImgParallax( container ){
 			image.animate({left: x},{duration: duration, easing: easing, queue: false});
 
 		});
-	}
-
-	function isMobile(){
-		return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)));
 	}
 
 	if( !isMobile() ){
