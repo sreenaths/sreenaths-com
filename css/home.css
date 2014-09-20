@@ -6,6 +6,6 @@
 .paralax-container{
 	height: 600px;
 }
-.paralax-container img{
+.paralax-container .img-float{
 	position: absolute;
 }

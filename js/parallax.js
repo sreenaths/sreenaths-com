@@ -1,11 +1,10 @@
-
 /* --- Parallax for sreenaths.com --- */
 
 function initiateImgParallax( container ){
 
 	var PARALAX_DURATION = 50;
 
-	var images = container.find('img');
+	var images = container.find('div');
 
 	function isMobile(){
 		return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)));
