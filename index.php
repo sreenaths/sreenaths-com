@@ -23,21 +23,24 @@
 
 		<div class="paralax-container grey-gradiant center">
 			<div class=inline-block>
-				<div class="img-float" x="1400" style="left:835px;top:500px;background-image: url('/images/techIcons/ruby.png');width:70px;height:88px;"/>&nbsp;</div>
-				<div class="img-float" x="1200" style="left:630px;top:480px;background-image: url('/images/techIcons/unity.png');width:220px;height:101px;"/>&nbsp;</div>
+				<div class="img-float" x="1400" style="left:835px;top:440px;background-image: url('/images/techIcons/ruby.png');width:70px;height:88px;"/>&nbsp;</div>
+				<div class="img-float" x="1200" style="left:650px;top:490px;background-image: url('/images/techIcons/unity.png');width:220px;height:101px;"/>&nbsp;</div>
 				<div class="img-float" x="-50" style="left:135px;top:250px;background-image: url('/images/techIcons/shell.png');width:100px;height:84px;"/>&nbsp;</div>
 				<div class="img-float" x="-10" style="left:160px;top:320px;background-image: url('/images/techIcons/php.png');width:120px;height:70px;"/>&nbsp;</div>
-				<div class="img-float" x="1000" style="left:805px;top:240px;background-image: url('/images/techIcons/java.png');width:170px;height:95px;"/>&nbsp;</div>
-				<div class="img-float" x="900" style="left:750px;top:70px;background-image: url('/images/techIcons/c.png');width:60px;height:71px;"/>&nbsp;</div>
-				<div class="img-float" x="900" style="left:695px;top:110px;background-image: url('/images/techIcons/cpp.png');width:170px;height:84px;"/>&nbsp;</div>
+				<div class="img-float" x="1000" style="left:815px;top:330px;background-image: url('/images/techIcons/java.png');width:170px;height:95px;"/>&nbsp;</div>
+				<div class="img-float" x="1000" style="left:550px;top:70px;background-image: url('/images/techIcons/c.png');width:60px;height:71px;"/>&nbsp;</div>
+				<div class="img-float" x="800" style="left:495px;top:110px;background-image: url('/images/techIcons/cpp.png');width:170px;height:84px;"/>&nbsp;</div>
 
-				<div class="img-float" x="900" style="left:700px;top:350px;background-image: url('/images/techIcons/jquery.png');width:174px;height:59px;"/>&nbsp;</div>
-				<div class="img-float" x="800" style="left:620px;top:330px;background-image: url('/images/techIcons/css3.png');width:90px;height:120px;"/>&nbsp;</div>
-				<div class="img-float" x="700" style="left:510px;top:330px;background-image: url('/images/techIcons/html5.png');width:127px;height:170px;"/>&nbsp;</div> 
-				<div class="img-float" x="900" style="left:620px;top:430px;background-image: url('/images/techIcons/javascript.png');width:220px;height:53px;"/>&nbsp;</div>
+				<div class="img-float" x="900" style="left:750px;top:130px;background-image: url('/images/techIcons/starling.png');width:160px;height:196px;"/>&nbsp;</div>
+				<div class="img-float" x="1000" style="left:695px;top:100px;background-image: url('/images/techIcons/as3.png');width:85px;height:85px;"/>&nbsp;</div>
 
-				<div class="img-float" x="900" style="left:590px;top:180px;background-image: url('/images/techIcons/starling.png');width:216px;height:124px;"/>&nbsp;</div>
-				<div class="img-float" x="900" style="left:495px;top:100px;background-image: url('/images/techIcons/as3.png');width:160px;height:160px;"/>&nbsp;</div>
+				<div class="img-float" x="1000" style="left:720px;top:400px;background-image: url('/images/techIcons/node.png');width:90px;height:110px;"/>&nbsp;</div>
+				<div class="img-float" x="850" style="left:700px;top:280px;background-image: url('/images/techIcons/ember.png');width:110px;height:110px;"/>&nbsp;</div>
+				<div class="img-float" x="900" style="left:700px;top:230px;background-image: url('/images/techIcons/jquery.png');width:180px;height:44px;"/>&nbsp;</div>
+				<div class="img-float" x="800" style="left:580px;top:370px;background-image: url('/images/techIcons/css3.png');width:100px;height:140px;"/>&nbsp;</div>
+				<div class="img-float" x="700" style="left:450px;top:300px;background-image: url('/images/techIcons/html5.png');width:127px;height:170px;"/>&nbsp;</div> 
+				<div class="img-float" x="900" style="left:570px;top:190px;background-image: url('/images/techIcons/javascript.png');width:131px;height:172px;"/>&nbsp;</div>
+
 				<div class="img-float" x="0" style="left:60px;top:0px;pointer-events:none;"><img src="/images/me.png"/></div>
 			</div>
 		</div>

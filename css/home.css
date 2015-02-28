@@ -8,4 +8,5 @@
 }
 .paralax-container .img-float{
 	position: absolute;
+	background-repeat: no-repeat;
 }
