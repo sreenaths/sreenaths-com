@@ -16,8 +16,8 @@
 				<div class=heading>About Me</div>
 				<div class=sub-heading style="width:480px;">Software Engineer, Design and Technology Enthusiast from Bangalore, India.</div>
 				<div class="description" style="width:480px;font-size:14px;">
-					<p>I am a designer by heart and a programmer by profession.<br/> I love designing and developing games and also enjoy coding generic APIs, libraries and game engines. What drives me the most is the thrill of designing the best experiences on various consumer devices.</p>
-					<p>Currently I'm working as a Senior Software Engineer at Zynga, India. I'm a big fan of ECMA based scripting languages, and I love working on user facing elements.</p>
+					<p>I am a designer by heart and a programmer by profession.<br/> User interfaces are what I love creating. What drives me the most is the thrill of designing the best experiences on various platforms.</p>
+					<p>Currently I'm working as a Senior Software Engineer at Hortonworks, the Hadoop company. I'm a big fan of ECMA based scripting languages, and I love working on user facing elements.</p>
 					<p>When I'm not with my keyboard, you might find me on a saddle or behind few lenses. I love travelling; nothing makes me happier than seeing new places and meeting new people. I believe every single person have a different story to tell, and new things to teach. I enjoy movies, music and art, I also love theoretical physics, and I believe that we are not alone in this Universe.</p>
 				</div>
 			</div>

@@ -47,13 +47,14 @@
 
 		<script> initiateImgParallax($(".paralax-container")); </script>
 
-		<div class="center bg1 v-padding" style="height:250px;">
+		<div class="center bg1 v-padding" style="height:270px;">
 			<div class="inline-block v-padding">
 				<div class=center>
 					<div class=sub-heading style="border-bottom:1px solid #CCCCCC;">My Current Assignment</div>
 					<div class="v-padding description">
-						<a href="http://www.myntra.com/"><img src="/images/myntra.png"></br></a>
-						Myntra is an Indian online shopping retailer of fashion and casual lifestyle products. We currently offers close to 50,000 products from more than 600 Indian and international brands, and ships about 5 million goods per month by hosting around 3,000 sellers.
+						<a href="http://tez.apache.org/"><img src="/images/tez.png"></a>
+						<a style="margin-left:100px;" href="http://hortonworks.com/"><img src="/images/hwx.png"></br></a>
+						Apache&#8482; Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop. Tez improves the MapReduce paradigm by dramatically improving its speed, while maintaining MapReduce's ability to scale to petabytes of data. As member of Hortonworks my contributions are in the development of TEZ user interface.
 					</div>
 				</div>
 			</div>

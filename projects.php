@@ -24,7 +24,7 @@
 				<div class=heading>Projects</div>
 				<div class=sub-heading style="width:500px;">They are more than a few lines of code. They are, what I am.</div>
 				<div class="description" style="font-size:14px;">
-					<p>Programming is my first love, we met at the dawn of this century. From the first glimpse I knew that we will be together for life. My first key program came out in 2002 and was a game. Over these years I have worked on numerous projects across multiple platforms, operating systems and languages.</p>
+					<p>Programming is my first love, and from the first glimpse I knew that we would be together for life. My first notable work was released in 2002, and was a game. Over these years I have worked on numerous projects across multiple platforms, operating systems, and languages.</p>
 				</div>
 			</div>
 		</div>
