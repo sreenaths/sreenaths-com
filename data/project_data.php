@@ -90,6 +90,42 @@
 		},
 		"projects": [
 			{
+				"id": "tez",
+				"displayName": "TEZ",
+				"chrono": "2014",
+				"image": "/images/projects/tez/main.jpg",
+				"link": "http://tez.apache.org/",
+				"tags": ["html","css","js","corporate"],
+				"technologies": "HTML 5, CSS 3, Javascript, NodeJs",
+				"description": "Apache&#8482; Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop. Tez improves the MapReduce paradigm by dramatically improving its speed, while maintaining MapReduce\'s ability to scale to petabytes of data. As member of Hortonworks my contributions are in the development of TEZ user interface.",
+				"screens": ["/images/projects/tez/ss1","/images/projects/tez/ss2","/images/projects/tez/ss3"],
+				"company": "<a class=\'hover-black\' href=\'http://hortonworks.com/\'>Hortonworks</a>"
+			},
+			{
+				"id": "myntra",
+				"displayName": "Myntra.com",
+				"chrono": "2014",
+				"image": "/images/projects/myntra/main.jpg",
+				"link": "http://www.myntra.com/",
+				"tags": ["html","css","js","corporate"],
+				"technologies": "HTML 5, CSS 3, Javascript, NodeJs",
+				"description": "Myntra is an Indian online shopping retailer of fashion and casual lifestyle products. We currently offers close to 50,000 products from more than 600 Indian and international brands, and ships about 5 million goods per month by hosting around 3,000 sellers.",
+				"screens": ["/images/projects/myntra/ss1","/images/projects/myntra/ss2","/images/projects/myntra/ss3"],
+				"company": "<a class=\'hover-black\' href=\'http://www.myntra.com/\'>Myntra</a>"
+			},
+			{
+				"id": "fv",
+				"displayName": "FarmVille",
+				"chrono": "2014",
+				"image": "/images/projects/fv/main.jpg",
+				"link": "https://apps.facebook.com/onthefarm",
+				"tags": ["games","as3","corporate"],
+				"technologies": "AS3",
+				"description": "FarmVille is a farming simulation social network game developed by Zynga. Its gameplay involves various aspects of farm management such as plowing land, planting, growing, and harvesting crops, harvesting trees and raising livestock.",
+				"screens": ["/images/projects/fv/ss1","/images/projects/fv/ss2","/images/projects/fv/ss3","/images/projects/fv/ss4"],
+				"company": "<a class=\'hover-black\' href=\'http://www.zynga.com\'>Zynga</a>"
+			},
+			{
 				"id": "hot",
 				"displayName": "Hidden Shadows",
 				"chrono": "2013",
@@ -298,7 +334,7 @@
 				"id": "languagelab",
 				"displayName": "Language Lab",
 				"chrono": "2007-2008",
-				"image": "/images/projects/nikira/main.jpg",
+				"image": "/images/projects/ll/main.jpg",
 				"link": null,
 				"tags": ["personal","vb"],
 				"technologies": "Visual Basic 6",

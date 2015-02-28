@@ -32,6 +32,7 @@
 
 	<div class="center inner-shade bg1">
 		
+		<!--
 		<div class="tag-bar">
 			<div id="sticky-bar" class="tag-bar">
 				<div class="inline-block v-padding">
@@ -50,7 +51,7 @@
 				</div>
 			</div>
 		</div>
-
+		-->
 		<ul class="projects-list">
 
 		 	<?php foreach( $projectData["projects"] as $project ){ ?>
