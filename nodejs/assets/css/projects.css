@@ -1,0 +1,103 @@
+
+/* 
+	CSS for projects page sreenaths.com
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700);
+
+.tag-bar{
+	width: 100%;
+}
+.tag-bar.stuck
+{
+	background: url('../images/bg-bottom.jpg');
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    z-index: 1000;
+
+	opacity:0.98;
+	filter:alpha(opacity=98);
+}
+.tag-bar ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px 0px 0px -4px;
+}
+.tag-bar li{
+	display: inline;
+}
+
+.projects-list{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.project{
+	border-top: 1px dotted #555;
+}
+.project .float{
+	width: 1024px;
+}
+.project div.rounded{
+	border-radius: 10px;
+	border: 1px solid #333;
+}
+.project a div.rounded:hover{
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.project div.small-icon{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.project .main-image{
+	float: left;
+	width:160px;
+	height:160px;
+}
+.project .details-container{
+	float: left;
+	padding-left: 15px;
+	width: 847px;
+
+	font-family: 'Istok Web', sans-serif;
+	font-size: 14px;
+	color: #888888;
+}
+.project .details-container .title{
+	font-size: 24px;
+}
+/*.project .details-container .title img{
+	padding-top: 5px;
+}*/
+.project .details-container .gallery-wrapper{
+	margin-top: 2px;
+}
+.project .details-container .gallery-wrapper .gallery-thumb{
+	display:inline-block;
+	width:64px;
+	height:64px;
+}
+.project .details-container .title a{
+/*	float: left; */
+}
+.project .details-container .title .tags{
+	text-align: right;
+	float: right;
+}
+.project .details-container .detail-type{
+	float: left;
+	font-weight: bold;
+	width: 150px;
+}
+.project .details-container .detail-value{
+}
+.project .description{
+	font-size: 14px;
+	line-height: 25px;
+	color: #555555;
+	padding-top:10px;
+	text-indent:50px;
+}
