@@ -1,14 +1,10 @@
 {{#import "shared/header-footer"}}
 
-	<title>Sreenath S &#187; Projects</title>
-
 	<link rel="stylesheet" type="text/css" href="css/projects.css">
 	<link href="css/lightbox.css" rel="stylesheet" />
 
 	<script src="js/lightbox.js"></script>
 	<script> sticky( "#sticky-bar" ); </script>
-
-	<style type="text/css"> #projects-hlink{ color: #FFFFFF !important; } </style>
 
 	<div class="grey-gradiant-half center">
 		<div class="inline-block v-padding-2x">
@@ -24,26 +20,23 @@
 
 	<div class="center inner-shade bg1">
 
-		<!--
 		<div class="tag-bar">
 			<div id="sticky-bar" class="tag-bar">
 				<div class="inline-block v-padding">
 					<div class=float>
 						<div class=sub-heading>Tags</div>
 						<ul>
-							<?php
-								$tagList = array();
-								foreach( $projectData["tags"] as $tag ){
-									array_push($tagList, '<li><a href="#" class="button"> <img src="',$tag["iconUrl"],'"/>',$tag["displayName"],' </a></li>');
-								}
-								echo ( implode("", $tagList) );
-							?>
+							{{#each tags as |tag|}}
+								<li><a href="#" class="button">
+									<img src="{{tag.iconUrl}}"/>{{tag.displayName}}
+								</a></li>
+							{{/each}}
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		-->
+
 		<ul class="projects-list">
 
 			{{#each projects as |project|}}

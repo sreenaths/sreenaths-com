@@ -19,11 +19,14 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/sreenaths/sreenathscom#readme",
   "dependencies": {
+    "clean-css": "^4.0.7",
     "fs-extra": "^2.0.0",
     "handlebars": "^4.0.6",
     "handlebars-helper-import": "^2.4.0",
-    "html-minifier": "^3.3.1",
+    "html-minify": "^0.3.2",
+    "less": "^2.7.2",
     "livereload": "^0.6.0",
+    "minifier": "^0.8.1",
     "open": "0.0.5",
     "watchr": "^3.0.1"
   }

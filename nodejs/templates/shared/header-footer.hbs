@@ -1,75 +1,69 @@
-
 <!DOCTYPE html>
 <html>
 
-<head profile="http://www.w3.org/2005/10/profile">
-	<link rel="stylesheet" type="text/css" href="css/shared.css">
+	<head>
+		<title>{{{title}}}</title>
 
-	<link rel="stylesheet" href="images/loader.gif"/>
+		<!-- Load styles -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="icon" type="image/png" href="favicon.png">
 
-	<link rel="icon" type="image/png" href="favicon.png">
+		<!-- Image preloads -->
+		<link rel="stylesheet" href="images/loader.gif"/>
 
-	<script src="js/jq.js"></script>
-	<script src="js/shared.js"></script>
-</head>
+		<!-- Load scripts -->
+		<script src="js/jq.js"></script>
+		<script src="js/shared.js"></script>
+	</head>
 
-<body class="landscape">
+	<body class="landscape {{bodyClass}}">
 
-<div id="loadingMsg" class="loading-msg">
-	<img src="images/ss.png" style="width:32px;height:32px;">
-	Loading</br>
-	<img src="images/loader.gif">
-</div>
-
-<div id="mainContainer" class="main-container">
-
-	<script>
-		_('loadingMsg').style.display = 'block';
-		_('mainContainer').style.display = 'none';
-
-		$(window).load(function(){
-			fadeOutIn( '#loadingMsg', '#mainContainer' );
-		});
-	</script>
-
-
-	<link rel="stylesheet" type="text/css" href="css/header-footer.css">
-
-	<!-- Image preloads -->
-	<img src="images/bg-header.jpg" class="hidden"/>
-
-	<div class="header center">
-		<div class="inline-block">
-			<a href="index"><div class=logo></div><div style="width:200px;float:left;margin-top:-8px;margin-left: 10px;">Sreenath Somarajapuram</div></a>
-			<div class=float-right style="margin-top:-10px;">
-				<a id="home-hlink" class=header-link href="index">home</a>&nbsp;&nbsp;&nbsp;
-				<a id="about-hlink" class=header-link href="about">about</a>&nbsp;&nbsp;&nbsp;
-				<a id="projects-hlink" class=header-link href="projects">projects</a>&nbsp;&nbsp;&nbsp;
-				<a id="contacts-hlink" class=header-link href="contacts">contacts</a>
-			</div>
+		<div class="loading-msg">
+			<img src="images/ss.png">
+			Loading</br>
+			<img src="images/loader.gif">
 		</div>
-	</div>
 
-	{{import}}
+		<div class="main-container">
+			<script>initLoaderAnim();</script>
 
-	<div class="footer center">
-		<div class="inline-block">
-			<div class="small-text">Copyright 2016 Sreenath Somarajapuram</div>
+			<!-- Image preloads -->
+			<img src="images/bg-header.jpg" class="hidden"/>
 
-			<div class=float-right style="width:50%; margin-top:-7px;">
-				<a href="index" class=hover-black>home</a>&nbsp;&nbsp;
-				<a href="about" class=hover-black>about</a>&nbsp;&nbsp;
-				<a href="projects" class=hover-black>projects</a>&nbsp;&nbsp;
-				<a href="contacts" class=hover-black>contacts</a>
-
-				<div class=float-right><a href="javascript:scrollTop();"><img src="images/up-arrow.png"/></a></div>
+			<div class="header center">
+				<div class="inline-block">
+					<a href="index">
+						<div class="logo"></div>
+						<div class="name">Sreenath Somarajapuram</div>
+					</a>
+					<div class="menu">
+						<a class="home-link" href="index">home</a>
+						<a class="about-link" href="about">about</a>
+						<a class="projects-link" href="projects">projects</a>
+						<a class="contacts-link" href="contacts">contacts</a>
+					</div>
+				</div>
 			</div>
 
+			{{import}}
+
+			<div class="footer center">
+				<div class="inline-block">
+					<div class="small-text">Copyright 2017 Sreenath Somarajapuram</div>
+
+					<div class="float-right menu">
+						<a href="index" class="hover-black">home</a>
+						<a href="about" class="hover-black">about</a>
+						<a href="projects" class="hover-black">projects</a>
+						<a href="contacts" class="hover-black">contacts</a>
+
+						<div class="float-right">
+							<a href="javascript:scrollTop();" class="hover-black">&#9651;</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
-	</div>
-
-</div>
-
-</body>
-
+	</body>
 </html>

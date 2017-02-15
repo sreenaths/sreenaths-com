@@ -60,3 +60,5 @@ function initiateImgParallax( container ){
 	});
 
 }
+
+initiateImgParallax($(".paralax-container"));
