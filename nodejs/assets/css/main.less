@@ -8,8 +8,8 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300);
 
 /* --- Overrides --- */
-body{ 
-	min-width: 1044px;
+body{
+	min-width: 400px;
 	margin: 0px;
 	background: url('../images/bg-footer.jpg');
 }
@@ -52,6 +52,10 @@ a {
 }
 
 /* --- Generic Styles --- */
+.no-mouse {
+	pointer-events: none;
+}
+
 .hidden {
 	display: none;
 }
@@ -60,14 +64,21 @@ a {
 	text-align: center;
 }
 
-.inline-block {
-	width: 1024px;
-	height: 100%;
-	text-align: left;
-	display: inline-block;
-	position: relative;
-	margin: 0px 10px 0px 10px;
+.outer-block {
+	.center;
+
+	padding: 0 30px 0 30px;
+
+	.inner-block {
+		display: inline-block;
+		position: relative;
+
+		width: 100%;
+		max-width: 1024px;
+		text-align: left;
+	}
 }
+
 
 .inner-shade {
 	-webkit-box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.3);
@@ -102,7 +113,7 @@ a {
 bar{
 	background: url('../images/bar.png.jpg');
 	height: 3px;
-	width: 949px;
+//	width: 949px;
 	display: inline-block;
 }
 
@@ -132,6 +143,10 @@ bar{
 	line-height: 25px;
 	word-spacing: 3px;
 	letter-spacing: 1px;
+}
+
+.small {
+	font-size: .5em;
 }
 
 /* --- Form ---*/
@@ -188,33 +203,33 @@ a.button {
 	font-size: 14px;
 	text-align:center;
 	padding: 2px 7px 2px 7px;
-	
+
 	border: 1px solid rgba(100,100,100,0.4);
 	
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
 	
-    -o-box-shadow: 
-        0 2px 8px rgba(0,0,0,0.5),
-        inset 0 1px rgba(255,255,255,0.3),
-        inset 0 10px rgba(255,255,255,0.2),
-        inset 0 10px 20px rgba(255,255,255,0.25),
-        inset 0 -15px 30px rgba(0,0,0,0.3);
+	-o-box-shadow:
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 10px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
 
-    -webkit-box-shadow: 
-        0 2px 8px rgba(0,0,0,0.5),
-        inset 0 1px rgba(255,255,255,0.3),
-        inset 0 10px rgba(255,255,255,0.2),
-        inset 0 10px 20px rgba(255,255,255,0.25),
-        inset 0 -15px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow:
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 10px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
 
-    -moz-box-shadow:
-        0 2px 8px rgba(0,0,0,0.5),
-        inset 0 1px rgba(255,255,255,0.3),
-        inset 0 10px rgba(255,255,255,0.2),
-        inset 0 10px 20px rgba(255,255,255,0.25),
-        inset 0 -15px 30px rgba(0,0,0,0.3);
+	-moz-box-shadow:
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 10px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
 	
 	box-shadow: 
         0 2px 8px rgba(0,0,0,0.2), /* Exterior Shadow */
@@ -226,14 +241,32 @@ a.button {
 	margin: 5px;
 	display: inline-block;
 	text-decoration: none;
+
+	img{
+		margin-bottom: -4px;
+		margin-right: 2px;
+	}
+
+	&:hover{
+		color:#000 !important;
+	}
+
+	.bubble {
+		display: inline-block;
+		font-size: .85em;
+
+		width: 15px;
+		height: 15px;
+
+		border: 1px solid rgba(100,100,100,0.4);
+		border-radius: 10px;
+	}
+
+	&.selected {
+    background-color: #6495ED;
+    color: #FFF;
+	}
 }
-a.button img{
-	margin-bottom: -4px;
-	margin-right: 2px;
-}
-a.button:hover{
-	color:#000 !important;
-};
 
 
 /*
@@ -241,69 +274,111 @@ a.button:hover{
 */
 
 .header{
-	padding-top: 45px;
-	height: 45px;
+	height: 90px;
 	background: url('../images/bg-header.jpg');
 
-	.logo{
-		margin-top: -32px;
-		background: url("../images/ss.png");
-		width: 64px;
-		height: 64px;
-		float: left;
+	.inner-block {
+		position: relative;
+		padding-top: 10px;
+
+		.index-link {
+			.logo, .name {
+				display: inline-block;
+			}
+			.logo{
+				vertical-align: middle;
+			}
+			.name {
+				width: 200px;
+			}
+		}
+
+		.menu {
+			position: absolute;
+			right: 0px;
+			bottom: 20px;
+
+			a {
+				font-size: 18px;
+				margin-right: 10px;
+			}
+		}
+
 	}
+}
 
-	.name {
-		width: 200px;
-		float: left;
-		margin-top: -8px;
-		margin-left: 10px;
-	}
+@media only screen and (max-width: 650px) {
+	.header{
+		.inner-block {
+			text-align: center;
 
-	.title{
-		float: left;
-		font-size: 40px;
-		color: #FFFFFF;
-		margin-top: -20px;
-		margin-left: 10px;
-		font-family: verdana;
-	}
-
-	.menu {
-		.float-right;
-		margin-top: -10px;
-
-		a {
-			font-size: 18px;
-			margin-right: 10px;
+			.index-link {
+				.logo {
+					width: 32px;
+				}
+				.name {
+					display: none;
+				}
+			}
+			.menu {
+				position: static;
+				margin-top: 10px;
+			}
 		}
 	}
 }
 
 .footer{
-	padding-top: 48px;
-	height: 45px;
+	height: 94px;
 	background: url('../images/bg-footer.jpg');
 	border-top: 1px solid;
 	border-color: #AAAAAA;
 
-	.menu {
-		width: 50%;
-		margin-top: -7px;
+	.inner-block {
+		position: relative;
+		padding-top: 40px;
 
-		a {
-			margin-right: 10px;
+		.small-text, .menu {
+			display: inline-block;
+			width: 45%;
+		}
+
+		.menu {
+			width: 50%;
+			a {
+				margin-left: 10px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.scroll-top {
+			position: absolute;
+			right: 0;
+			top: 40px;
 		}
 	}
+}
 
-	.inline-block{
-		height: 40px;
-	}
-	.small-text{
-		margin-top: -7.5px;
-		float: left;
+@media only screen and (max-width: 650px) {
+	.footer{
+		.inner-block {
+			padding-top: 23px;
+
+			.small-text, .menu {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+
+			.small-text {
+				margin-bottom: 10px;
+			}
+		}
 	}
 }
+
 
 // Header menu items
 .home-page {
@@ -339,7 +414,7 @@ a.button:hover{
 		.cover-image {
 			position: absolute;
 			bottom: 40px;
-			right: 0px;
+			right: 30px;
 		}
 		.sub-heading, .description {
 			width:490px;
@@ -349,7 +424,7 @@ a.button:hover{
 		}
 	}
 
-	.content-bar {
+	.facts-bar {
 		.super-heros {
 			position: absolute;
 			bottom: 0px;
@@ -369,6 +444,35 @@ a.button:hover{
 	}
 }
 
+@media only screen and (max-width: 1010px) {
+	.about-page {
+
+		.title-bar {
+			.sub-heading, .description {
+				width: 100%;
+			}
+			.cover-image {
+				position: static;
+				text-align: center;
+
+				width: 40%;
+
+				padding-top: 10px;
+			}
+		}
+
+		.facts-bar {
+			.super-heros {
+				position: static;
+
+				width: 50%;
+
+				margin-bottom: -25px;
+			}
+		}
+	}
+}
+
 .contacts-page {
 	background-color: rgba(255, 255, 255, .5);
 
@@ -384,8 +488,22 @@ a.button:hover{
 		width:500px;
 
 		a {
-			display: block;
+			display: inline-block;
 			margin-bottom: 10px;
+			width: 350px;
+		}
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.contacts-page {
+		.cover-image {
+			position: static;
+			width: 50%;
+		}
+
+		.sub-heading, .description {
+			width: 100%;
 		}
 	}
 }

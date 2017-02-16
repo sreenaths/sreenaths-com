@@ -6,10 +6,6 @@ function initiateImgParallax( container ){
 
 	var images = container.find('div');
 
-	function isMobile(){
-		return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)));
-	}
-
 	if( isMobile() ) return;
 
 	// -- Set items to the expected conf if js is enabled ---

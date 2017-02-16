@@ -4,37 +4,35 @@
 	<link href="css/lightbox.css" rel="stylesheet" />
 
 	<script src="js/lightbox.js"></script>
-	<script> sticky( "#sticky-bar" ); </script>
+	<script>
+		sticky("#sticky-bar");
+	</script>
 
-	<div class="title-bar center grey-gradiant-half">
-		<div class="inline-block v-padding-2x">
-			<div class=float>
-				<div class="heading">Projects</div>
-				<div class="sub-heading">
-					They are more than a few lines of code. They are, what I am.
-				</div>
-				<div class="description">
-					<p>Programming is my first love, and from the first glimpse I knew that we would be together for life. My first notable work was released in 2002, and was a game. Over these years I have worked on numerous projects across multiple platforms, operating systems, and languages.</p>
-				</div>
+	<div class="title-bar outer-block grey-gradiant-half">
+		<div class="inner-block v-padding-2x">
+			<div class="heading">Projects</div>
+			<div class="sub-heading">
+				They are more than a few lines of code. They are, what I am.
+			</div>
+			<div class="description">
+				<p>Programming is my first love, and from the first glimpse I knew that we would be together for life. My first notable work was released in 2002, and was a game. Over these years I have worked on numerous projects across multiple platforms, operating systems, and languages.</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="center inner-shade bg1">
+	<div class="inner-shade bg1">
 
-		<div class="tag-bar">
-			<div id="sticky-bar" class="tag-bar">
-				<div class="inline-block v-padding">
-					<div class=float>
-						<div class=sub-heading>Tags</div>
-						<ul>
-							{{#each tags as |tag|}}
-								<li><a href="#" class="button">
-									<img src="{{tag.iconUrl}}"/>{{tag.displayName}}
-								</a></li>
-							{{/each}}
-						</ul>
-					</div>
+		<div>
+			<div id="sticky-bar" class="outer-block tag-bar">
+				<div class="inner-block v-padding">
+					<div class=sub-heading>Tags</div>
+					<ul>
+						{{#each tags as |tag|}}
+							<li><a href="#" onClick="toggleTagSelection('{{tag.name}}'); return false;" class="button {{tag.name}}">
+								<img src="{{tag.iconUrl}}"/>{{tag.displayName}} <div class="bubble">{{tag.count}}</div>
+							</a></li>
+						{{/each}}
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -42,73 +40,84 @@
 		<ul class="projects-list">
 
 			{{#each projects as |project|}}
-				<li class="project {{project.tags}}">
-					<div class="inline-block v-padding-2x">
-						<div class="float full-width">
 
-							<div style="width:100%;">
+				<li class="project outer-block {{project.tagNames}}">
+					<div class="inner-block v-padding-2x">
+						<div>
+							<div class="details">
+								<a href="{{project.link}}" class="main-image-container {{project.linkClass}}">
+									<div class="rounded main-image" style="background-image:url({{project.image}});" ></div>
+								</a>
 
-								<div style="height:160px;">
-									{{#if project.link}}
-										<a href="{{project.link}}">
-											<div class="rounded main-image" style="background-image:url({{project.image}});" ></div>
+								<div class="details-container">
+									<div class="title" >
+										<a class="hover-black {{project.linkClass}}" href="{{project.link}}">
+											{{{project.displayName}}}
 										</a>
-									{{else}}
-										<div class="rounded main-image" style="background-image:url({{project.image}});" ></div>
-									{{/if}}
 
-									<div class="details-container">
+										{{#if project.git}}
+											<a class="hover-black" href="{{project.git}}">
+												<img src="images/git.png"/>
+											</a>
+										{{/if}}
+									</div>
 
-										<div class="title" >
+									<div class="tags">
+										{{#each project._tags as |tag|}}
+											<img title="{{tag.displayName}}" src="{{tag.iconUrl}}"/>
+										{{/each}}
+									</div>
 
-											{{#if project.link}}
-												<a class="hover-black" href="{{project.link}}">
-													{{project.displayName}}
-												</a>
-											{{else}}
-												{{project.displayName}}
-											{{/if}}
+									<div class="detail">
+										<div class="detail-type">Technologies</div>
+										<div class="detail-value">{{project.technologies}}</div>
+									</div>
 
-											{{#if project.git}}
-												<a class="hover-black" href="{{project.git}}">
-													<img src="images/git.png"/>
-												</a>
-											{{/if}}
+									<div class="detail">
+										<div class="detail-type">Chrono</div>
+										<div class="detail-value">{{project.chrono}}</div>
+									</div>
 
-											<div class="tags">
-												{{#each project._tags as |tag|}}
-													<img title="{{tag.displayName}}" src="{{tag.iconUrl}}"/>
-												{{/each}}
-												&nbsp;
-											</div>
-
-										</div>
-										<div class="detail-type">Technologies</div> <div class="detail-value">{{project.technologies}}</div>
-										<div class="detail-type">Chrono</div> <div class="detail-value">{{project.chrono}}</div>
-
-										{{#if project.company}}
-											<div class="detail-type">Associate</div> <div class="detail-value">
+									{{#if project.company}}
+										<div class="detail">
+											<div class="detail-type">Associate</div>
+											<div class="detail-value">
 												<a class="hover-black" href="{{project.companyHref}}">
 													{{project.company}}
 												</a>
 											</div>
-										{{else}}
-											<div class="detail-type">Project type</div> <div class="detail-value">Personal fun project</div>
-										{{/if}}
-
-										{{#if project.screens.length}}
-											<div class=gallery-wrapper>
-												{{#each project.screens as |screen|}}
-													<a href="{{screen}}.jpg" data-lightbox="{{project.id}}" title="{{project.displayName}}">
-														<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg);" ></div>
-													</a>
-												{{/each}}
-											</div>
-										{{/if}}
+										</div>
+									{{else}}
+									<div class="detail">
+										<div class="detail-type">Project type</div>
+										<div class="detail-value">Personal fun project</div>
 									</div>
-								</div>
-								<div class="description" >{{project.description}}</div>
+									{{/if}}
 
+									{{#if project.screens.length}}
+										<div class="gallery-wrapper">
+											{{#each project.screens as |screen|}}
+												<a href="{{screen}}.jpg" data-lightbox="{{project.id}}" title="{{project.displayName}}">
+													<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg);" ></div>
+												</a>
+											{{/each}}
+										</div>
+									{{/if}}
+								</div>
+							</div>
+
+							{{#if project.screens.length}}
+								<div class=gallery-wrapper>
+									{{#each project.screens as |screen|}}
+										<a href="{{screen}}.jpg" data-lightbox="{{project.id}}" title="{{project.displayName}}">
+											<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg);" ></div>
+										</a>
+									{{/each}}
+								</div>
+							{{/if}}
+
+							<div class="description">
+								{{project.description}}
 							</div>
 						</div>
 					</div>

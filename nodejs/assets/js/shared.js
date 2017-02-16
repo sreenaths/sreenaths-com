@@ -2,6 +2,10 @@
 	Shared scripts : sreenaths.com
 */
 
+function isMobile(){
+	return (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)));
+}
+
 function fadeOutIn( fadeOutSelector, fadeInSelector ){
 	$(fadeOutSelector).fadeOut({complete:function(){
 		$(fadeInSelector).fadeIn();
@@ -30,17 +34,44 @@ function sticky( elementSelector ){
 		var parent = element.parent();
 		var doc = $(document);
 
-		var stuck = false; // Maybe better perf
-
 		function onWindowScroll( event ){
 			if(doc.scrollTop() >= parent.offset().top) {
-				if(!stuck) stuck = true, element.addClass("stuck"), parent.css("height", element.css("height") );
+				element.addClass("stuck");
+				parent.css("min-height", element.css("height") );
 			}
-			else if( stuck ) stuck=false, element.removeClass("stuck"), parent.css("height", element.css("height") );
+			else {
+				element.removeClass("stuck");
+			}
 		}
 
-		$(window).scroll( onWindowScroll );
+		if(!isMobile()) {
+			$(window).scroll(onWindowScroll);
+			$(window).resize(onWindowScroll);
+		}
 
 	});
+}
 
+function toggleTagSelection(tagName) {
+	var tagButton = $(".tag-bar").find("." + tagName);
+	tagButton.toggleClass("selected");
+
+	var selectedTags = $(".tag-bar").find(".selected").map(function (index, button) {
+		return button.className.replace("selected", "").replace("button", "").trim();
+	}).toArray();
+
+	$(".projects-list").find(".project").each(selectedTags.length === 0 ? function (index, project) {
+		$(project).fadeIn();
+	} :function (index, project) {
+		var tagNames = project.className.replace("project", "").replace("outer-block", "").trim().split(" "),
+				selected = false;
+
+		tagNames.forEach(function (tagName) {
+			if(selectedTags.indexOf(tagName) !== -1) {
+				selected = true;
+			}
+		})
+
+		$(project)[selected ? "fadeIn" : "fadeOut"]();
+	});
 }

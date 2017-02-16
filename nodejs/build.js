@@ -60,9 +60,29 @@ function buildCSS(sourceFile, targetFile) {
 
 	// Fetch & normalise project data;
 	var projectData = fs.readJsonSync("./data/project_data.json");
+
+	Object.keys(projectData.tags).forEach(function (tagName) {
+		projectData.tags[tagName].name = tagName;
+	});
+
 	projectData.projects.forEach(function (project) {
+
+		if(!project.link) {
+			project.linkClass = "no-mouse";
+		}
+
+		project.tagNames = project.tags.join(" ");
+
 		project._tags = project.tags.map(function (tagName) {
-			return projectData.tags[tagName];
+
+			var tagInfo = projectData.tags[tagName];
+			if(tagInfo.count === undefined) {
+				tagInfo.count = 0;
+			}
+			tagInfo.count++;
+
+			return tagInfo;
+
 		});
 	});
 

@@ -48,6 +48,14 @@
 			"displayName": "C++",
 			"iconUrl": "images/techIcons/small/cpp.png"
 		},
+		"emberjs":{
+			"displayName": "Ember JS",
+			"iconUrl": "images/techIcons/small/ember.png"
+		},
+		"nodejs":{
+			"displayName": "Node.js",
+			"iconUrl": "images/techIcons/small/node.png"
+		},
 		"jquery":{
 			"displayName": "j-Query",
 			"iconUrl": "images/techIcons/small/jquery.png"
@@ -88,11 +96,11 @@
 	"projects": [
 		{
 			"id": "tez",
-			"displayName": "TEZ",
+			"displayName": "TEZ UI",
 			"chrono": "2014-Present",
 			"image": "images/projects/tez/main.jpg",
 			"link": "http://tez.apache.org/",
-			"tags": ["html","css","js","corporate"],
+			"tags": ["html","css","js", "jquery", "emberjs", "nodejs", "java","corporate"],
 			"technologies": "HTML 5, CSS 3, Javascript, NodeJs",
 			"description": "Apache Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop. Tez improves the MapReduce paradigm by dramatically improving its speed, while maintaining MapReduce\\'s ability to scale to petabytes of data. As member of Hortonworks my contributions are in the development of TEZ user interface.",
 			"screens": ["images/projects/tez/ss1","images/projects/tez/ss2","images/projects/tez/ss3"],
@@ -105,7 +113,7 @@
 			"chrono": "2014",
 			"image": "images/projects/myntra/main.jpg",
 			"link": "http://www.myntra.com/",
-			"tags": ["html","css","js","corporate"],
+			"tags": ["html","css","js", "jquery","corporate"],
 			"technologies": "HTML 5, CSS 3, Javascript, NodeJs",
 			"description": "Myntra is an Indian online shopping retailer of fashion and casual lifestyle products. We currently offers close to 50,000 products from more than 600 Indian and international brands, and ships about 5 million goods per month by hosting around 3,000 sellers.",
 			"screens": ["images/projects/myntra/ss1","images/projects/myntra/ss2","images/projects/myntra/ss3"],
@@ -134,7 +142,7 @@
 			"tags": ["games","as3","starling","corporate"],
 			"technologies": "AS3, Starling framework",
 			"description": "Hidden shadows is the latest game from Zynga in the hidden objects genre. The game is a sequel to Hidden Chronicles. The game is a supernatural crime thriller in which you play the role of Michael Alder, an young executive, to solve the mysteries behind murders in Gracetown. My team had build three key features of the game, and is also working on numerous other modules. We are also in charge of solving all UI related technical blockers.",
-			"screens": ["images/projects/hs/ss1","images/projects/hs/ss2","images/projects/hs/ss3","images/projects/hs/ss4","images/projects/hs/ss5","images/projects/hs/ss6","images/projects/hs/ss7","images/projects/hs/ss8"],
+			"screens": ["images/projects/hs/ss1","images/projects/hs/ss2","images/projects/hs/ss3","images/projects/hs/ss4","images/projects/hs/ss5","images/projects/hs/ss6","images/projects/hs/ss7"],
 			"company": "Zynga",
 			"companyHref": "http://zynga.com"
 		},
@@ -172,7 +180,7 @@
 			"tags": ["games","as3","flash","personal"],
 			"technologies": "AS3 and Flash",
 			"description": "Frigil was our entry for the 2012 Hackathon. The game was envisioned and implemented by my artist friend and me in less than a week. The game says the story of Frigil, the frog; who is on a saga to be the next king. Reaching the yellow leaf completes each level, but take care to stay away from the foes and also ensure to collect the goodies for better score.",
-			"screens": ["images/projects/frigil/ss1","images/projects/frigil/ss2","images/projects/frigil/ss3","images/projects/frigil/ss4","images/projects/frigil/ss5","images/projects/frigil/ss6","images/projects/frigil/ss7","images/projects/frigil/ss8"],
+			"screens": ["images/projects/frigil/ss1","images/projects/frigil/ss2","images/projects/frigil/ss4","images/projects/frigil/ss5","images/projects/frigil/ss6","images/projects/frigil/ss7","images/projects/frigil/ss8"],
 			"company": "Zynga",
 			"companyHref": "http://zynga.com"
 		},
@@ -234,7 +242,7 @@
 			"image": "images/projects/z.jpg",
 			"link": null,
 			"tags": ["php","hbase"],
-			"technologies": "PHP, AS3, JavaScript, , Hbase",
+			"technologies": "PHP, AS3, JavaScript, Hbase",
 			"description": "Greyhound provides a set of technologies and Game Mechanics APIs that improve server efficiency. It\\'s working at the core of all new Zynga games including FramVille 2.",
 			"screens": [],
 			"company": "Zynga",
@@ -271,7 +279,7 @@
 			"chrono": "2011",
 			"image": "images/projects/s.jpg",
 			"link": null,
-			"tags": ["js","html","css","php"],
+			"tags": ["js", "jquery", "extjs","html","css","php"],
 			"technologies": "JavaScript, HTML5 (Canvas), PHP",
 			"description": "LinkPad provides a highly interactive interface for creating flow charts on a browser. It was made purely on HTML5 canvas; a VML based canvas alternative named s-canvas was also created for compatibility with the then IE versions.  It\\'s used by ROC-FM for the graphical representation and management of process workflows.",
 			"screens": [],
@@ -304,11 +312,11 @@
 		},
 		{
 			"id": "nikira",
-			"displayName": "Nikira (Now ROC Fraud Management)",
+			"displayName": "Nikira <span class=small>(Now ROC Fraud Management)</span>",
 			"chrono": "2008-2011",
 			"image": "images/projects/nikira/main.jpg",
 			"link": "http://www.subex.com/fraud-management.php",
-			"tags": ["js","html","css","rails","cpp","flash","shell"],
+			"tags": ["js", "jquery", "extjs","html","css","rails","cpp","flash","shell"],
 			"technologies": "Rails, Ruby, C++, JavaScript, Ext-JS, Flash, Shell script",
 			"description": "Our team development and support the best fraud management system for mobile NOCs. Worked on all modules, from the heavy weight C++ server to ROR thin client and Java thick client. My key contributions were in the development of an advanced querying framework, a data steam manager, a multi file up-loader and few file translators.",
 			"screens": ["images/projects/nikira/ss1","images/projects/nikira/ss2"],
@@ -317,13 +325,13 @@
 		},
 		{
 			"id": "neo",
-			"displayName": "NEO (Neutral Emulation Of NEO)",
+			"displayName": "NEO <span class=small>(Neutral Emulation Of NEO)</span>",
 			"chrono": "2008",
 			"image": "images/projects/neo/main.jpg",
 			"link": null,
 			"tags": ["personal","java"],
 			"technologies": "Java",
-			"description": "As part of the college main project, we created a virtual baby named NEO. He was programmed to reacts to our expressions, emotions and actions. A webcam and microphone acted as NEO\\'s sensory inputs, the monitor and pare of speakers acted as outputs. Using motion detection NEO\\'s eyes would follow moving objects, he would express happiness while listening to soothing sound and would get emotional with noises. Coupled with face recognition and gesture recognition we expanded NEO\\'s capabilities. The main technical innovation we made in this project was a grammatical parser based on the nine emotions of natyasastra. This enabled the system to learn and evolve based on activities happening around. Also one main aim was to enable to the system to learn sounds and associate it with gestures.",
+			"description": "As part of the college main project, we created a virtual baby named NEO. He was programmed to reacts to our expressions, emotions and actions. A webcam and microphone acted as NEO's sensory inputs, the monitor and pare of speakers acted as outputs. Using motion detection NEO's eyes would follow moving objects, he would express happiness while listening to soothing sound and would get emotional with noises. Coupled with face recognition and gesture recognition we expanded NEO's capabilities. The main technical innovation we made in this project was a grammatical parser based on the nine emotions of natyasastra. This enabled the system to learn and evolve based on activities happening around. Also one main aim was to enable to the system to learn sounds and associate it with gestures.",
 			"screens": [],
 			"company": "College project"
 		},
@@ -336,7 +344,7 @@
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
 			"description": "SCube was our college mini project. The name represents SSS and stands for Synchronous Sashay Simulator. The aim was to provide an efficient, versatile and generalized platform to ascertain the shortest path or the simplest path connecting two places on a map. Our system uses a method totally different from the conventional graph based approach, and provides better results in real world scenarios. It works in two phases. The creation/pre-procession phase in which an intermediate file called the map file is created from a black and white image of the map. Black represents obstacles and white represents traversable area. Non-traversable white patches on the map are removed through a process called lagoon erasing, and then edge detection is performed to get the data required for the intermediate file. Once the map file is create it can be used any number of times for finding path between two points. To find a path, shortest routes over the intersecting edges are taken and smoothened out using our RDH algorithm.",
-			"screens": ["images/projects/s3/ss1","images/projects/s3/ss2","images/projects/s3/ss3","images/projects/s3/ss4","images/projects/s3/ss5","images/projects/s3/ss6","images/projects/s3/ss7","images/projects/s3/ss8"],
+			"screens": ["images/projects/s3/ss2","images/projects/s3/ss3","images/projects/s3/ss4","images/projects/s3/ss5","images/projects/s3/ss6","images/projects/s3/ss7","images/projects/s3/ss8"],
 			"company": "College project"
 		},
 		{
@@ -359,7 +367,7 @@
 			"link": null,
 			"tags": ["personal","vb"],
 			"technologies": "Visual Basic 6",
-			"description": "Sozer stands for school organizer. It\\'s the biggest product from MyFactory. The product helped in complete management of a school, it provided everything from managing time-table to the ledger sheet sheets. The product was installed at some schools in my state.",
+			"description": "Sozer stands for school organizer. It's the biggest product from MyFactory. The product helped in complete management of a school, it provided everything from managing time-table to the ledger sheet sheets. The product was installed at some schools in my state.",
 			"screens": [],
 			"company": "MyFactory"
 		},
@@ -395,7 +403,7 @@
 			"link": null,
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
-			"description": "ARMADA stands for Artificial Recognition and Manipulation of Alphabetic Datum. It\\'s the C++ implementation of my handwriting recognition algorithm, MAI-II. Back in 2002-03, when Microsoft\\'s tablet PCs were the hot cakes of the tech world, what attracted me most, were the stylus and the magical recognition of characters written with it. Those made me start a mission to create a system that could recognize handwritten characters in any language. After multiple iterations of various algorithms and prototypes, I accomplished my goal; ARMADA core 2 was created. The software can learn the way you write a character, memorize it and use at a later instance to recognize the same. The best part is that it can learn any language.",
+			"description": "ARMADA stands for Artificial Recognition and Manipulation of Alphabetic Datum. It's the C++ implementation of my handwriting recognition algorithm, MAI-II. Back in 2002-03, when Microsoft's tablet PCs were the hot cakes of the tech world, what attracted me most, were the stylus and the magical recognition of characters written with it. Those made me start a mission to create a system that could recognize handwritten characters in any language. After multiple iterations of various algorithms and prototypes, I accomplished my goal; ARMADA core 2 was created. The software can learn the way you write a character, memorize it and use at a later instance to recognize the same. The best part is that it can learn any language.",
 			"screens": ["images/projects/armada/ss1","images/projects/armada/ss2","images/projects/armada/ss3","images/projects/armada/ss4","images/projects/armada/ss5"],
 			"company": null
 		},
@@ -420,7 +428,7 @@
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
 			"description": "Perspective 3D Engine is my C++ implementation of the perspective projection in engineering graphics. Using the tool one can easily design a 3D wireframe; view perspective projection of the same, and alter the projection parameters. The project was initially started as an educational tool to learn the effect of various parameters on the projection of an object. Later the core of the project was used as a 3D engine in some other programs. It helped in animating objects in all three space dimensions.",
-			"screens": ["images/projects/perspective/ss1","images/projects/perspective/ss2","images/projects/perspective/ss3","images/projects/perspective/ss4","images/projects/perspective/ss5","images/projects/perspective/ss6","images/projects/perspective/ss7","images/projects/perspective/ss8","images/projects/perspective/ss9"],
+			"screens": ["images/projects/perspective/ss1","images/projects/perspective/ss3","images/projects/perspective/ss5","images/projects/perspective/ss6","images/projects/perspective/ss7","images/projects/perspective/ss8","images/projects/perspective/ss9"],
 			"company": null
 		},
 		{
@@ -431,7 +439,7 @@
 			"link": null,
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
-			"description": "As a programmer, my key aim back in those days was to explore beyond the boundaries of conventional programming. As I\\'m more inclined towards graphics, one key objective was to directly control graphics card for better performance, color and resolution. Hence project SVEGA was started. SVEGA provided TC++ APIs for drawing basic shapes and displaying BMP images in SVGA. 256-colored SVGA was a major achievement above the 16-colored VGA provided by graphics header file.",
+			"description": "As a programmer, my key aim back in those days was to explore beyond the boundaries of conventional programming. As I'm more inclined towards graphics, one key objective was to directly control graphics card for better performance, color and resolution. Hence project SVEGA was started. SVEGA provided TC++ APIs for drawing basic shapes and displaying BMP images in SVGA. 256-colored SVGA was a major achievement above the 16-colored VGA provided by graphics header file.",
 			"screens": ["images/projects/svega/ss1","images/projects/svega/ss2","images/projects/svega/ss3"],
 			"company": null
 		},
@@ -455,7 +463,7 @@
 			"link": null,
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
-			"description": "Tumac stands for The Unlimited Machine. It\\'s programmed to calculate Gregorian calendar for any year you can enter in a fraction of a second. This feat is achieved by computing the required calculations while entering the year. The key innovation is a new math to do basic operations from left to right than the known right to left approach.",
+			"description": "Tumac stands for The Unlimited Machine. It's programmed to calculate Gregorian calendar for any year you can enter in a fraction of a second. This feat is achieved by computing the required calculations while entering the year. The key innovation is a new math to do basic operations from left to right than the known right to left approach.",
 			"screens": ["images/projects/tumac/ss1","images/projects/tumac/ss2","images/projects/tumac/ss3","images/projects/tumac/ss4"],
 			"company": null
 		},
@@ -468,7 +476,7 @@
 			"tags": ["personal","cpp"],
 			"technologies": "Turbo C++ 3.0",
 			"description": "Graphics and UX had been always my favorite, and there is nothing better than games to experiment with both. Attached are screenshots from some of my DOS games. They helped me learn programming and also came handy in some TC++ presentations.",
-			"screens": ["images/projects/cgames/ss1","images/projects/cgames/ss2","images/projects/cgames/ss3","images/projects/cgames/ss4","images/projects/cgames/ss5","images/projects/cgames/ss6","images/projects/cgames/ss7","images/projects/cgames/ss8","images/projects/cgames/ss9","images/projects/cgames/ss10","images/projects/cgames/ss11"],
+			"screens": ["images/projects/cgames/ss1"	,"images/projects/cgames/ss3","images/projects/cgames/ss4","images/projects/cgames/ss5","images/projects/cgames/ss9","images/projects/cgames/ss10","images/projects/cgames/ss11"],
 			"company": null
 		},
 		{

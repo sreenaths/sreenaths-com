@@ -7,22 +7,19 @@
 
 .title-bar {
 	background-color: rgba(255, 255, 255, .5);
-
-	.sub-heading {
-		width:500px;
-	}
 	.description {
 		font-size:14px;
 	}
 }
 
 .tag-bar {
-	width: 100%;
-
 	&.stuck {
 		background: url('../images/bg-bottom.jpg');
 		position: fixed;
+		left: 0;
+		right: 0;
 		top: 0;
+
 		box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
 		z-index: 1000;
 
@@ -50,10 +47,6 @@
 .project{
 	border-top: 1px dotted #555;
 
-	.float{
-		width: 1024px;
-	}
-
 	div.rounded{
 		border-radius: 10px;
 		border: 1px solid #333;
@@ -64,6 +57,76 @@
 		filter:alpha(opacity=80);
 	}
 
+	.gallery-wrapper {
+		display: none;
+
+		margin-top: 2px;
+
+		word-wrap: break-word;
+
+		.gallery-thumb{
+			display:inline-block;
+			width:64px;
+			height:64px;
+			margin-right: 5px;
+		}
+	}
+
+	.details {
+		position: relative;
+
+		.main-image{
+			display: inline-block;
+
+			width:160px;
+			height:160px;
+
+			margin-right: 15px;
+		}
+
+		.tags {
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			text-align: right;
+			img {
+				margin: 0 -2px 0 -2px;
+			}
+		}
+
+		.details-container{
+			display: inline-block;
+
+			vertical-align: top;
+
+			font-family: 'Istok Web', sans-serif;
+			font-size: 14px;
+			color: #888888;
+
+			.title {
+				display: inline;
+				font-size: 24px;
+			}
+
+			.gallery-wrapper {
+				display: inline;
+			}
+
+			.detail {
+				text-align: left;
+				.detail-type{
+					display: inline-block;
+					font-weight: bold;
+					width: 150px;
+				}
+				.detail-value {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
 	.description{
 		font-size: 14px;
 		line-height: 25px;
@@ -72,53 +135,33 @@
 		text-indent:50px;
 	}
 
-	div.small-icon{
-		margin-left: 5px;
-		margin-top: 5px;
-	}
+}
 
-	.main-image{
-		float: left;
-		width:160px;
-		height:160px;
-	}
-	.details-container{
-		float: left;
-		padding-left: 15px;
-		width: 847px;
-
-		font-family: 'Istok Web', sans-serif;
-		font-size: 14px;
-		color: #888888;
-
-		.title {
-			font-size: 24px;
-
-			.tags {
-				text-align: right;
-				float: right;
-
-				img {
-					margin: 0 -2px 0 -2px;
+@media only screen and (max-width: 770px) {
+	.project {
+		.details {
+			.details-container {
+				margin-bottom: 10px;
+				.title {
+					font-size: 7vw;
+					margin-top: 10px;
+				}
+				.tags {
+					position: static;
+					text-align: left;
+					margin-bottom: 5px;
+				}
+				.gallery-wrapper {
+					display: none;
+				}
+				.detail {
+					font-size: 2.7vw;
 				}
 			}
 		}
 
 		.gallery-wrapper {
-			margin-top: 2px;
-
-			.gallery-thumb{
-				display:inline-block;
-				width:64px;
-				height:64px;
-				margin-right: 5px;
-			}
-		}
-
-		.detail-type{
-			float: left;
-			font-weight: bold;
-			width: 150px;
+			display: inline;
 		}
 	}
 }
