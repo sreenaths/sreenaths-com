@@ -327,9 +327,20 @@ a.button:hover{
 	}
 }
 
+.skype-plus {
+	vertical-align: middle;
+}
+
 /*-- Pages --*/
 .about-page {
 	.title-bar {
+		background-color: rgba(255, 255, 255, .5);
+
+		.cover-image {
+			position: absolute;
+			bottom: 40px;
+			right: 0px;
+		}
 		.sub-heading, .description {
 			width:490px;
 		}
@@ -340,9 +351,9 @@ a.button:hover{
 
 	.content-bar {
 		.super-heros {
-			background: url('../images/men.png');
-			background-position: bottom right;
-			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
 		}
 
 		.sub-heading {
@@ -354,6 +365,27 @@ a.button:hover{
 		}
 		ul {
 			margin-left: -22px;
+		}
+	}
+}
+
+.contacts-page {
+	background-color: rgba(255, 255, 255, .5);
+
+	.cover-image {
+		position: absolute;
+		bottom: 60px;
+		right: 0px;
+	}
+	.sub-heading {
+		width:400px;
+	}
+	.description {
+		width:500px;
+
+		a {
+			display: block;
+			margin-bottom: 10px;
 		}
 	}
 }
