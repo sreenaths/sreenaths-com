@@ -1,5 +1,17 @@
 {
 	"tags": {
+		"js":{
+			"displayName": "JavaScript",
+			"iconUrl": "images/techIcons/small/javascript.png"
+		},
+		"html":{
+			"displayName": "HTML 5",
+			"iconUrl": "images/techIcons/small/html5.png"
+		},
+		"css":{
+			"displayName": "CSS 3",
+			"iconUrl": "images/techIcons/small/css3.png"
+		},
 		"as3":{
 			"displayName": "Action Script 3",
 			"iconUrl": "images/techIcons/small/as3.png"
@@ -16,10 +28,6 @@
 			"displayName": "Flare 3D",
 			"iconUrl": "images/techIcons/small/flare3d.png"
 		},
-		"js":{
-			"displayName": "JavaScript",
-			"iconUrl": "images/techIcons/small/javascript.png"
-		},
 		"hbase":{
 			"displayName": "H-Base",
 			"iconUrl": "images/techIcons/small/hbase.png"
@@ -31,14 +39,6 @@
 		"java":{
 			"displayName": "Java",
 			"iconUrl": "images/techIcons/small/java.png"
-		},
-		"html":{
-			"displayName": "HTML 5",
-			"iconUrl": "images/techIcons/small/html5.png"
-		},
-		"css":{
-			"displayName": "CSS 3",
-			"iconUrl": "images/techIcons/small/css3.png"
 		},
 		"rails":{
 			"displayName": "Ruby & ROR",
