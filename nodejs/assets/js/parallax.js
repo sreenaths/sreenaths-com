@@ -55,6 +55,15 @@ function initiateImgParallax( container ){
 		},550 );
 	});
 
+	function onResize() {
+		var width = $(window).width();
+		if(width < 1024) {
+			$(".paralax-container").css("zoom", width / 1024);
+		}
+	}
+	$(window).resize(onResize);
+	onResize();
+
 }
 
 initiateImgParallax($(".paralax-container"));
