@@ -102,7 +102,7 @@
 			"link": "http://tez.apache.org/",
 			"tags": ["html","css","js", "jquery", "emberjs", "nodejs", "java","corporate"],
 			"technologies": "HTML 5, CSS 3, Javascript, NodeJs",
-			"description": "Apache Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop. Tez improves the MapReduce paradigm by dramatically improving its speed, while maintaining MapReduce\\'s ability to scale to petabytes of data. As member of Hortonworks my contributions are in the development of TEZ user interface.",
+			"description": "Apache Tez is an extensible framework for building high performance batch and interactive data processing applications, coordinated by YARN in Apache Hadoop. Tez improves the MapReduce paradigm by dramatically improving its speed, while maintaining MapReduce's ability to scale to petabytes of data. As member of Hortonworks my contributions are in the development of TEZ user interface.",
 			"screens": ["images/projects/tez/ss1","images/projects/tez/ss2","images/projects/tez/ss3"],
 			"company": "Hortonworks",
 			"companyHref": "http://hortonworks.com"
@@ -154,7 +154,7 @@
 			"link": null,
 			"tags": ["as3","starling","personal"],
 			"technologies": "AS3, Starling framework",
-			"description": "Starling UI is an extension for starting framework with better UI components. It was started as my personal project, and now it\\'s an inseparable part of our latest game, Hidden Shadows. The extension includes view-port, lossless-text-field, masked display container, rounded-progress- bars, scroll-panes, image-loader, tiling-systems, layering-composite etc.",
+			"description": "Starling UI is an extension for starting framework with better UI components. It was started as my personal project, and now it's an inseparable part of our latest game, Hidden Shadows. The extension includes view-port, lossless-text-field, masked display container, rounded-progress- bars, scroll-panes, image-loader, tiling-systems, layering-composite etc.",
 			"screens": ["images/projects/starlingui/ss1","images/projects/starlingui/ss2","images/projects/starlingui/ss3"],
 			"company": null
 		},
@@ -243,7 +243,7 @@
 			"link": null,
 			"tags": ["php","hbase"],
 			"technologies": "PHP, AS3, JavaScript, Hbase",
-			"description": "Greyhound provides a set of technologies and Game Mechanics APIs that improve server efficiency. It\\'s working at the core of all new Zynga games including FramVille 2.",
+			"description": "Greyhound provides a set of technologies and Game Mechanics APIs that improve server efficiency. It's working at the core of all new Zynga games including FramVille 2.",
 			"screens": [],
 			"company": "Zynga",
 			"companyHref": "http://zynga.com"
@@ -269,7 +269,7 @@
 			"link": null,
 			"tags": ["personal","as3"],
 			"technologies": "AS3",
-			"description": "A highly flexible axonometric game engine built on my patented technology. The engine is capable of handling any tile size in all camera angles and width to height ratios. It\\'s achieved by using my new geometric equations, the same are on final patenting process under U.S patent application serial no: 13/745,103. The engine helped in envisioning CraftIso pitch and Greyhound demo.",
+			"description": "A highly flexible axonometric game engine built on my patented technology. The engine is capable of handling any tile size in all camera angles and width to height ratios. It's achieved by using my new geometric equations, the same are on final patenting process under U.S patent application serial no: 13/745,103. The engine helped in envisioning CraftIso pitch and Greyhound demo.",
 			"screens": ["images/projects/iso2D/ss1","images/projects/iso2D/ss2","images/projects/iso2D/ss3","images/projects/iso2D/ss4","images/projects/iso2D/ss5"],
 			"company": null
 		},
@@ -281,7 +281,7 @@
 			"link": null,
 			"tags": ["js", "jquery", "extjs","html","css","php"],
 			"technologies": "JavaScript, HTML5 (Canvas), PHP",
-			"description": "LinkPad provides a highly interactive interface for creating flow charts on a browser. It was made purely on HTML5 canvas; a VML based canvas alternative named s-canvas was also created for compatibility with the then IE versions.  It\\'s used by ROC-FM for the graphical representation and management of process workflows.",
+			"description": "LinkPad provides a highly interactive interface for creating flow charts on a browser. It was made purely on HTML5 canvas; a VML based canvas alternative named s-canvas was also created for compatibility with the then IE versions.  It's used by ROC-FM for the graphical representation and management of process workflows.",
 			"screens": [],
 			"company": "Subex",
 			"companyHref": "http://subex.com"
@@ -294,7 +294,7 @@
 			"link": null,
 			"tags": ["personal","js"],
 			"technologies": "JavaScript",
-			"description": "A library mothering various UI widgets, components and utilities. After working with YUI and ExtJS, my intention was to create a pure JS based library that is better modularized with each class in a separate file, and at the same time more flexible by dynamically loading the required scripts when required. <a href=\\'http://sreenaths.com/javascript/Tests/testSDock.html\\'>Click here</a> to see demo of one of the component.",
+			"description": "A library mothering various UI widgets, components and utilities. After working with YUI and ExtJS, my intention was to create a pure JS based library that is better modularized with each class in a separate file, and at the same time more flexible by dynamically loading the required scripts when required. <a href='http://sreenaths.com/javascript/Tests/testSDock.html'>Click here</a> to see demo of one of the component.",
 			"screens": ["images/projects/sjs/ss1","images/projects/sjs/ss2","images/projects/sjs/ss3"],
 			"company": null
 		},
