@@ -1,9 +1,9 @@
 {{#import "shared/header-footer"}}
 
-	<link rel="stylesheet" type="text/css" href="css/projects.css">
-	<link href="css/lightbox.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/projects.css?ver={{version}}">
+	<link href="css/lightbox.css?ver={{version}}" rel="stylesheet" />
 
-	<script src="js/lightbox.js"></script>
+	<script src="js/lightbox.js?ver={{version}}"></script>
 	<script>
 		sticky("#sticky-bar");
 	</script>
@@ -46,7 +46,7 @@
 						<div>
 							<div class="details">
 								<a href="{{project.link}}" class="main-image-container {{project.linkClass}}">
-									<div class="rounded main-image" style="background-image:url({{project.image}});" ></div>
+									<div class="rounded main-image" style="background-image:url({{project.image}}?ver={{version}});" ></div>
 								</a>
 
 								<div class="details-container">
@@ -57,14 +57,14 @@
 
 										{{#if project.git}}
 											<a class="hover-black" href="{{project.git}}">
-												<img src="images/git.png"/>
+												<img src="images/git.png?ver={{version}}"/>
 											</a>
 										{{/if}}
 									</div>
 
 									<div class="tags">
 										{{#each project._tags as |tag|}}
-											<img title="{{tag.displayName}}" src="{{tag.iconUrl}}"/>
+											<img title="{{tag.displayName}}" src="{{tag.iconUrl}}?ver={{version}}"/>
 										{{/each}}
 									</div>
 
@@ -98,7 +98,7 @@
 										<div class="gallery-wrapper">
 											{{#each project.screens as |screen|}}
 												<a href="{{screen}}.jpg" data-lightbox="{{project.id}}" title="{{project.displayName}}">
-													<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg);" ></div>
+													<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg?ver={{version}});" ></div>
 												</a>
 											{{/each}}
 										</div>
@@ -110,7 +110,7 @@
 								<div class=gallery-wrapper>
 									{{#each project.screens as |screen|}}
 										<a href="{{screen}}.jpg" data-lightbox="{{project.id}}" title="{{project.displayName}}">
-											<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg);" ></div>
+											<div class="rounded gallery-thumb" style="background-image:url({{screen}}t.jpg?ver={{version}});" ></div>
 										</a>
 									{{/each}}
 								</div>

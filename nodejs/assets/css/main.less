@@ -9,7 +9,7 @@
 
 /* --- Overrides --- */
 body{
-	min-width: 400px;
+	min-width: 320px;
 	margin: 0px;
 	background: url('../images/bg-footer.jpg');
 }
@@ -79,6 +79,11 @@ a {
 	}
 }
 
+@media only screen and (max-width: 400px) {
+	.outer-block {
+		padding: 0 20px 0 20px;
+	}
+}
 
 .inner-shade {
 	-webkit-box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.3);
@@ -379,6 +384,16 @@ a.button {
 	}
 }
 
+@media only screen and (max-width: 400px) {
+	.footer{
+		.inner-block {
+			.scroll-top {
+				top: 35px;
+			}
+		}
+	}
+}
+
 
 // Header menu items
 .home-page {
@@ -504,6 +519,17 @@ a.button {
 
 		.sub-heading, .description {
 			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.contacts-page {
+		.description {
+			font-size: 14px;
+		}
+		img:first-child {
+			width: 40px;
 		}
 	}
 }

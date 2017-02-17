@@ -1,6 +1,7 @@
 'use strict';
 
 const DIST = "./dist"
+const BUILD_VERSION = "1"; // Use this for cache break
 
 var less = require('less');
 var fs = require('fs-extra');
@@ -36,6 +37,7 @@ function writeFile(file, data) {
 
 function buildHTML(sourceFile, targetFile, context) {
 	var template = handlebars.compile(`{{import '${sourceFile}'}}`);
+	context.version = BUILD_VERSION;
 	writeFile(targetFile, template(context));
 }
 

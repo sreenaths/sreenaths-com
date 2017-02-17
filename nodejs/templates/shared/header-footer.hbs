@@ -4,37 +4,38 @@
 	<head>
 		<title>{{{title}}}</title>
 
+		<!-- Setting viewport for mobiles -->
+		<meta name=viewport content="width=320, initial-scale=1">
+
 		<!-- Load styles -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/main.css?ver={{version}}">
+		<link rel="icon" type="image/png" href="favicon.png?ver={{version}}">
 
 		<!-- Image preloads -->
-		<link rel="stylesheet" href="images/loader.gif"/>
+		<link rel="prefetch" href="images/loader.gif?ver={{version}}"/>
+		<link rel="prefetch" href="images/bg-header.jpg?ver={{version}}"/>
 
 		<!-- Load scripts -->
-		<script src="js/jq.js"></script>
-		<script src="js/shared.js"></script>
+		<script src="js/jq.js?ver={{version}}"></script>
+		<script src="js/shared.js?ver={{version}}"></script>
 	</head>
 
 	<body class="landscape {{bodyClass}}">
 
 		<div class="loading-msg">
-			<img src="images/ss.png">
+			<img src="images/ss.png?ver={{version}}">
 			Loading</br>
-			<img src="images/loader.gif">
+			<img src="images/loader.gif?ver={{version}}">
 		</div>
 
 		<div class="main-container">
 			<script>initLoaderAnim();</script>
 
-			<!-- Image preloads -->
-			<img src="images/bg-header.jpg" class="hidden"/>
-
 			<div class="header outer-block">
 				<div class="inner-block">
 					<a class="index-link" href="index">
-						<img class="logo" src="images/ss.png"/>
-						<div class="name">Sreenath Somarajapuram</div>
+						<img class="logo" src="images/ss.png?ver={{version}}"/>
+						<div class="name">&nbsp;Sreenath Somarajapuram</div>
 					</a>
 					<div class="menu">
 						<a class="home-link" href="index">home</a>
