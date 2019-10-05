@@ -34,6 +34,17 @@
 
 		li{
 			display: inline;
+
+			.tag-name {
+				display: inline-block;
+				width: 0px;
+				overflow: hidden;
+				white-space: nowrap;
+
+				&:hover {
+					width: auto;
+				}
+			}
 		}
 	}
 }

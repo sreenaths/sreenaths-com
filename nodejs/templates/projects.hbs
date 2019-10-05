@@ -29,7 +29,9 @@
 					<ul>
 						{{#each tags as |tag|}}
 							<li><a href="#" onClick="toggleTagSelection('{{tag.name}}'); return false;" class="button {{tag.name}}">
-								<img src="{{tag.iconUrl}}"/>{{tag.displayName}} <div class="bubble">{{tag.count}}</div>
+								<img src="{{tag.iconUrl}}"/>
+								<div class="tag-name">{{tag.displayName}}</div>
+								<div class="bubble">{{tag.count}}</div>
 							</a></li>
 						{{/each}}
 					</ul>
