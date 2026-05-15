@@ -1,9 +1,133 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/home.less';
 ---
 
-<Layout title="Sreenath Somarajapuram">
-  <main>
-    <h1>Hello, World!</h1>
-  </main>
+<Layout title="Sreenath Somarajapuram" bodyClass="home-page">
+
+  <div class="paralax-container grey-gradiant">
+    <div class="inner-block">
+      <div data-x="1400" style="left:835px;top:440px;background-image:url('/images/techIcons/ruby.png');width:70px;height:88px;">&nbsp;</div>
+      <div data-x="1200" style="left:650px;top:490px;background-image:url('/images/techIcons/unity.png');width:220px;height:101px;">&nbsp;</div>
+      <div data-x="-50"  style="left:135px;top:250px;background-image:url('/images/techIcons/shell.png');width:100px;height:84px;">&nbsp;</div>
+      <div data-x="-10"  style="left:160px;top:320px;background-image:url('/images/techIcons/php.png');width:120px;height:70px;">&nbsp;</div>
+      <div data-x="1000" style="left:815px;top:330px;background-image:url('/images/techIcons/java.png');width:170px;height:95px;">&nbsp;</div>
+      <div data-x="1000" style="left:550px;top:70px;background-image:url('/images/techIcons/c.png');width:60px;height:71px;">&nbsp;</div>
+      <div data-x="800"  style="left:495px;top:110px;background-image:url('/images/techIcons/cpp.png');width:170px;height:84px;">&nbsp;</div>
+      <div data-x="900"  style="left:750px;top:130px;background-image:url('/images/techIcons/starling.png');width:160px;height:196px;">&nbsp;</div>
+      <div data-x="1000" style="left:695px;top:100px;background-image:url('/images/techIcons/as3.png');width:85px;height:85px;">&nbsp;</div>
+      <div data-x="1000" style="left:720px;top:400px;background-image:url('/images/techIcons/node.png');width:90px;height:110px;">&nbsp;</div>
+      <div data-x="850"  style="left:700px;top:280px;background-image:url('/images/techIcons/ember.png');width:110px;height:110px;">&nbsp;</div>
+      <div data-x="900"  style="left:700px;top:230px;background-image:url('/images/techIcons/jquery.png');width:180px;height:44px;">&nbsp;</div>
+      <div data-x="800"  style="left:580px;top:370px;background-image:url('/images/techIcons/css3.png');width:100px;height:140px;">&nbsp;</div>
+      <div data-x="700"  style="left:450px;top:300px;background-image:url('/images/techIcons/html5.png');width:127px;height:170px;">&nbsp;</div>
+      <div data-x="900"  style="left:570px;top:190px;background-image:url('/images/techIcons/javascript.png');width:131px;height:172px;">&nbsp;</div>
+      <div style="left:60px;top:0px;pointer-events:none;">
+        <img src="/images/me.png" alt="Sreenath Somarajapuram" />
+      </div>
+    </div>
+  </div>
+
+  <div class="outer-block bg1 v-padding current-assignment">
+    <div class="inner-block v-padding">
+      <div class="center">
+        <div class="sub-heading">My Current Assignment</div>
+        <div class="v-padding description">
+          <!-- TODO: update with current role and company -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer-block inner-shade bg2 v-padding contacts">
+    <div class="inner-block">
+      <div class="center">
+        <div class="sub-heading">Contact Me</div>
+        <div>
+          <a title="E-Mail" href="mailto:mailme@sreenaths.com">
+            <img src="/images/icons/mail-icon.png" alt="Email" />
+          </a>
+          <a title="LinkedIn" href="https://in.linkedin.com/pub/sreenath-somarajapuram/24/993/a84">
+            <img src="/images/icons/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+          <a title="Facebook" href="https://www.facebook.com/sreenathsomarajapuram">
+            <img src="/images/icons/facebook-icon.png" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </Layout>
+
+<script>
+  function isMobile(): boolean {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+  }
+
+  function initiateImgParallax(container: HTMLElement): void {
+    const PARALLAX_DURATION = 50;
+    const images = Array.from(container.querySelectorAll<HTMLElement>('.inner-block > div'));
+
+    if (isMobile()) return;
+
+    // Mirror the original logic: swap data-x and CSS left, offset by index
+    images.forEach((image, index) => {
+      const dataX = parseInt(image.dataset.x ?? '0');
+      const cssLeft = parseInt(image.style.left) || 0;
+      image.dataset.x = String(cssLeft + (index + 1) * 5);
+      image.style.left = dataX + 'px';
+      image.style.transition = `left ${PARALLAX_DURATION}ms linear`;
+    });
+
+    container.style.visibility = 'hidden';
+
+    function animateParallax(mX: number): void {
+      const xPos = mX - container.getBoundingClientRect().left;
+      const mouseXFactor = Math.round((xPos / container.offsetWidth) * 10);
+      images.forEach((image, index) => {
+        const x = parseInt(image.dataset.x ?? '0');
+        image.style.left = (x - (index + 1) * mouseXFactor) + 'px';
+      });
+    }
+
+    container.addEventListener('mousemove', (e) => animateParallax(e.pageX));
+    container.addEventListener('mouseleave', () => {
+      animateParallax(container.getBoundingClientRect().left + container.offsetWidth / 2);
+    });
+
+    function onLoad(): void {
+      setTimeout(() => {
+        container.style.visibility = 'visible';
+        container.style.opacity = '0';
+        container.style.transition = 'opacity 0.5s ease';
+        animateParallax(container.getBoundingClientRect().left + container.offsetWidth / 2);
+        requestAnimationFrame(() => {
+          container.style.opacity = '1';
+        });
+      }, 550);
+    }
+
+    if (document.readyState === 'complete') {
+      onLoad();
+    } else {
+      window.addEventListener('load', onLoad);
+    }
+  }
+
+  function onResize(): void {
+    const container = document.querySelector<HTMLElement>('.paralax-container');
+    if (!container) return;
+    const width = window.innerWidth;
+    (container.style as CSSStyleDeclaration & { zoom: string }).zoom =
+      width < 1024 ? String(width / 1024) : '1';
+  }
+
+  const parallaxContainer = document.querySelector<HTMLElement>('.paralax-container');
+  if (parallaxContainer) {
+    initiateImgParallax(parallaxContainer);
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize();
+</script>

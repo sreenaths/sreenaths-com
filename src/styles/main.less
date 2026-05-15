@@ -1,0 +1,499 @@
+/*
+	Main CSS for sreenaths.com
+*/
+
+/* -- Fonts -- 	*/
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Alef&family=Oxygen:wght@300&display=swap');
+
+/* --- Overrides --- */
+body{
+	min-width: 320px;
+	margin: 0px;
+	background: url('/images/bg-footer.jpg');
+}
+
+a {
+	&:hover, &:visited, &:link, &:active {
+		font-family: 'Istok Web', sans-serif;
+		text-decoration: none;
+		color: #999999;
+	}
+
+	&:hover {
+		color: #FFFFFF !important;
+	}
+
+	&.hover-black:hover {
+		color: #000000 !important;
+	}
+}
+
+
+/* --- Loading anim --- */
+.loading-msg {
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -25px;
+	width:80px;
+	height:50px;
+	color: #888888;
+	font-family: Helvetica;
+	display: none;
+
+	img:first-child {
+		width:32px;
+		height:32px;
+	}
+}
+
+/* --- Generic Styles --- */
+.no-mouse {
+	pointer-events: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.outer-block {
+	.center;
+
+	padding: 0 30px 0 30px;
+
+	.inner-block {
+		display: inline-block;
+		position: relative;
+
+		width: 100%;
+		max-width: 1024px;
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.outer-block {
+		padding: 0 20px 0 20px;
+	}
+}
+
+.inner-shade {
+	-webkit-box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.3);
+	-moz-box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.3);
+	box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.3);
+}
+
+/* --- Offseters --- */
+.v-padding{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.v-padding-2x{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* ---- BGs ---- */
+.bg1{
+	background: url('/images/bg-bottom.jpg');
+	border-top: 1px solid;
+	border-color: #999999;
+}
+.bg2{
+	background: url('/images/bg-bottom2.jpg');
+	border-top: 1px solid;
+	border-color: #999999;
+}
+
+/* --- Bars --- */
+bar{
+	background: url('/images/bar.png.jpg');
+	height: 3px;
+	display: inline-block;
+}
+
+/* ---- Texts ---- */
+.heading{
+	font-family: 'Alef', sans-serif;
+	font-size: 48px;
+	color: #222222;
+}
+
+.sub-heading{
+	font-family: 'Istok Web', sans-serif;
+	font-size: 18px;
+	color: #888888;
+}
+
+.small-text{
+	font-family: 'Istok Web', sans-serif;
+	font-size: 14px;
+	color: #999999;
+}
+
+.description{
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	color: #444444;
+	line-height: 25px;
+	word-spacing: 3px;
+	letter-spacing: 1px;
+}
+
+.small {
+	font-size: .5em;
+}
+
+/* --- Form ---*/
+.form-submit-button{
+	background:#B9DFFF;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+}
+.form-submit-button:hover{
+	background:#016ABC;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+}
+
+/* --- Aligners --- */
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.grey-gradiant{
+	background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
+}
+
+.grey-gradiant-half{
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 46%, rgba(205,205,205,1) 99%, rgba(204,204,204,1) 100%);
+}
+
+/*-- Button ---*/
+a.button {
+	color:#777;
+	font-size: 14px;
+	text-align:center;
+	padding: 2px 7px 2px 7px;
+
+	border: 1px solid rgba(100,100,100,0.4);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	box-shadow:
+		0 2px 8px rgba(0,0,0,0.2),
+		inset 0 1px rgba(255,255,255,0.3),
+		inset 0 10px rgba(255,255,255,0.2),
+		inset 0 10px 20px rgba(255,255,255,0.25),
+		inset 0 -15px 30px rgba(0,0,0,0.3);
+
+	margin: 5px;
+	display: inline-block;
+	text-decoration: none;
+
+	img{
+		margin-bottom: -4px;
+		margin-right: 2px;
+	}
+
+	&:hover{
+		color:#000 !important;
+	}
+
+	.bubble {
+		display: inline-block;
+		font-size: .85em;
+
+		width: 15px;
+		height: 15px;
+
+		border: 1px solid rgba(100,100,100,0.4);
+		border-radius: 10px;
+	}
+
+	&.selected {
+		background-color: #6495ED;
+		color: #FFF;
+	}
+}
+
+
+/*
+	Header & Footer CSS for sreenaths.com
+*/
+
+.header{
+	height: 90px;
+	background: url('/images/bg-header.jpg');
+
+	.inner-block {
+		position: relative;
+		padding-top: 10px;
+
+		.index-link {
+			.logo, .name {
+				display: inline-block;
+			}
+			.logo{
+				vertical-align: middle;
+			}
+			.name {
+				width: 200px;
+			}
+		}
+
+		.menu {
+			position: absolute;
+			right: 0px;
+			bottom: 20px;
+
+			a {
+				font-size: 18px;
+				margin-right: 10px;
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.header{
+		.inner-block {
+			text-align: center;
+
+			.index-link {
+				.logo {
+					width: 32px;
+				}
+				.name {
+					display: none;
+				}
+			}
+			.menu {
+				position: static;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.footer{
+	height: 94px;
+	background: url('/images/bg-footer.jpg');
+	border-top: 1px solid;
+	border-color: #AAAAAA;
+
+	.inner-block {
+		position: relative;
+		padding-top: 40px;
+
+		.small-text, .menu {
+			display: inline-block;
+			width: 45%;
+		}
+
+		.menu {
+			width: 50%;
+			a {
+				margin-left: 10px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.scroll-top {
+			position: absolute;
+			right: 0;
+			top: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.footer{
+		.inner-block {
+			padding-top: 23px;
+
+			.small-text, .menu {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+
+			.small-text {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.footer{
+		.inner-block {
+			.scroll-top {
+				top: 35px;
+			}
+		}
+	}
+}
+
+
+// Header menu items
+.home-page {
+	.home-link {
+		color: #FFF;
+	}
+}
+.about-page {
+	.about-link {
+		color: #FFF;
+	}
+}
+.contacts-page {
+	.contacts-link{
+		color: #FFF;
+	}
+}
+.projects-page {
+	.projects-link{
+		color: #FFF;
+	}
+}
+
+.skype-plus {
+	vertical-align: middle;
+}
+
+/*-- Pages --*/
+.about-page {
+	.title-bar {
+		background-color: rgba(255, 255, 255, .5);
+
+		.cover-image {
+			position: absolute;
+			bottom: 40px;
+			right: 30px;
+		}
+		.sub-heading, .description {
+			width:490px;
+		}
+		.description {
+			font-size:14px;
+		}
+	}
+
+	.facts-bar {
+		.super-heros {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+		}
+
+		.sub-heading {
+			width:400px;
+		}
+		.description {
+			width:700px;
+			font-size:14px;
+		}
+		ul {
+			margin-left: -22px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1010px) {
+	.about-page {
+
+		.title-bar {
+			.sub-heading, .description {
+				width: 100%;
+			}
+			.cover-image {
+				position: static;
+				text-align: center;
+
+				width: 40%;
+
+				padding-top: 10px;
+			}
+		}
+
+		.facts-bar {
+			.super-heros {
+				position: static;
+
+				width: 50%;
+
+				margin-bottom: -25px;
+			}
+		}
+	}
+}
+
+.contacts-page {
+	background-color: rgba(255, 255, 255, .5);
+
+	.cover-image {
+		position: absolute;
+		bottom: 60px;
+		right: 0px;
+	}
+	.sub-heading {
+		width:400px;
+	}
+	.description {
+		width:500px;
+
+		a {
+			display: inline-block;
+			margin-bottom: 10px;
+			width: 350px;
+		}
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.contacts-page {
+		.cover-image {
+			position: static;
+			width: 50%;
+		}
+
+		.sub-heading, .description {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.contacts-page {
+		.description {
+			font-size: 14px;
+		}
+		img:first-child {
+			width: 40px;
+		}
+	}
+}
