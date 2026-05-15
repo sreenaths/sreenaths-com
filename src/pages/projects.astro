@@ -1,0 +1,403 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/projects.less';
+import '../styles/lightbox.less';
+import rawData from '../data/project_data.json';
+
+interface TagDef {
+  displayName: string;
+  iconUrl: string;
+}
+
+interface Tag extends TagDef {
+  name: string;
+  count: number;
+}
+
+interface ProjectRaw {
+  id: string;
+  displayName: string;
+  chrono: string;
+  image: string;
+  link: string | null;
+  git?: string;
+  tags: string[];
+  technologies: string;
+  description: string;
+  screens: string[];
+  company: string | null;
+  companyHref?: string;
+}
+
+interface Project extends ProjectRaw {
+  tagNames: string;
+  linkClass: string;
+  _tags: Tag[];
+}
+
+// Count tag usage across all projects
+const tagCounts: Record<string, number> = {};
+for (const project of rawData.projects as ProjectRaw[]) {
+  for (const tagName of project.tags) {
+    tagCounts[tagName] = (tagCounts[tagName] ?? 0) + 1;
+  }
+}
+
+// Build enriched tag map
+const tags: Record<string, Tag> = Object.fromEntries(
+  Object.entries(rawData.tags as Record<string, TagDef>).map(([name, tag]) => [
+    name,
+    { ...tag, name, count: tagCounts[name] ?? 0 },
+  ])
+);
+
+// Build enriched projects
+const projects: Project[] = (rawData.projects as ProjectRaw[]).map((project) => ({
+  ...project,
+  tagNames: project.tags.join(' '),
+  linkClass: project.link ? '' : 'no-mouse',
+  _tags: project.tags.map((name) => tags[name]).filter(Boolean),
+}));
+
+// Only show tags that are actually used
+const tagList = Object.values(tags).filter((tag) => tag.count > 0);
+---
+
+<Layout title="Projects - Sreenath Somarajapuram" bodyClass="projects-page">
+
+  <div class="title-bar outer-block grey-gradiant-half">
+    <div class="inner-block v-padding-2x">
+      <div class="heading">Projects</div>
+      <div class="sub-heading">
+        They are more than a few lines of code. They are, what I am.
+      </div>
+      <div class="description">
+        <p>Programming is my first love, and from the first glimpse I knew that we would be together for life. My first notable work was released in 2002, and was a game. Over these years I have worked on numerous projects across multiple platforms, operating systems, and languages.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="inner-shade bg1">
+
+    <div>
+      <div id="sticky-bar" class="outer-block tag-bar">
+        <div class="inner-block v-padding">
+          <div class="sub-heading">Tags</div>
+          <ul>
+            {tagList.map((tag) => (
+              <li>
+                <a
+                  href="#"
+                  class={`button ${tag.name}`}
+                  data-tag={tag.name}
+                >
+                  <img src={`/${tag.iconUrl}`} alt={tag.displayName} />
+                  <div class="tag-name">{tag.displayName}</div>
+                  <div class="bubble">{tag.count}</div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ul class="projects-list">
+      {projects.map((project) => (
+        <li class={`project outer-block ${project.tagNames}`}>
+          <div class="inner-block v-padding-2x">
+            <div>
+              <div class="details">
+                <a
+                  href={project.link ?? '#'}
+                  class={`main-image-container ${project.linkClass}`}
+                >
+                  <div
+                    class="rounded main-image"
+                    style={`background-image:url(/${project.image});background-size:cover;`}
+                  />
+                </a>
+
+                <div class="details-container">
+                  <div class="title">
+                    <a
+                      class={`hover-black ${project.linkClass}`}
+                      href={project.link ?? '#'}
+                      set:html={project.displayName}
+                    />
+                    {project.git && (
+                      <a class="hover-black" href={project.git}>
+                        <img src="/images/link.png" alt="Git" />
+                      </a>
+                    )}
+                  </div>
+
+                  <div class="tags">
+                    {project._tags.map((tag) => (
+                      <img title={tag.displayName} src={`/${tag.iconUrl}`} alt={tag.displayName} />
+                    ))}
+                  </div>
+
+                  <div class="detail">
+                    <div class="detail-type">Technologies</div>
+                    <div class="detail-value">{project.technologies}</div>
+                  </div>
+
+                  <div class="detail">
+                    <div class="detail-type">Chrono</div>
+                    <div class="detail-value">{project.chrono}</div>
+                  </div>
+
+                  {project.company ? (
+                    <div class="detail">
+                      <div class="detail-type">Associate</div>
+                      <div class="detail-value">
+                        <a class="hover-black" href={project.companyHref}>
+                          {project.company}
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    <div class="detail">
+                      <div class="detail-type">Project type</div>
+                      <div class="detail-value">Personal fun project</div>
+                    </div>
+                  )}
+
+                  {project.screens.length > 0 && (
+                    <div class="gallery-wrapper">
+                      {project.screens.map((screen) => (
+                        <a href={`/${screen}.jpg`} data-lightbox={project.id} title={project.displayName}>
+                          <div
+                            class="rounded gallery-thumb"
+                            style={`background-image:url(/${screen}t.jpg);background-size:cover;`}
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {project.screens.length > 0 && (
+                <div class="gallery-wrapper">
+                  {project.screens.map((screen) => (
+                    <a href={`/${screen}.jpg`} data-lightbox={project.id} title={project.displayName}>
+                      <div
+                        class="rounded gallery-thumb"
+                        style={`background-image:url(/${screen}t.jpg);background-size:cover;`}
+                      />
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              <div class="description" set:html={project.description} />
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+
+</Layout>
+
+<script>
+  /* --- Utilities --- */
+  function isMobile(): boolean {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+  }
+
+  /* --- Sticky tag bar --- */
+  function initSticky(selector: string): void {
+    const element = document.querySelector<HTMLElement>(selector);
+    if (!element || isMobile()) return;
+
+    const parent = element.parentElement!;
+
+    function onScroll(): void {
+      if (window.scrollY >= parent.offsetTop) {
+        element.classList.add('stuck');
+        parent.style.minHeight = element.offsetHeight + 'px';
+      } else {
+        element.classList.remove('stuck');
+        parent.style.minHeight = '';
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+
+  /* --- Tag filter --- */
+  function initTagFilter(): void {
+    document.querySelector('.tag-bar')?.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLElement>('a[data-tag]');
+      if (!btn) return;
+      e.preventDefault();
+
+      const tagName = btn.dataset.tag!;
+      btn.classList.toggle('selected');
+
+      const selectedTags = Array.from(
+        document.querySelectorAll<HTMLElement>('.tag-bar a[data-tag].selected')
+      ).map((el) => el.dataset.tag!);
+
+      document.querySelectorAll<HTMLElement>('.projects-list .project').forEach((project) => {
+        if (selectedTags.length === 0) {
+          project.style.display = '';
+          return;
+        }
+        const projectClasses = Array.from(project.classList).filter(
+          (c) => c !== 'project' && c !== 'outer-block'
+        );
+        const matches = selectedTags.some((tag) => projectClasses.includes(tag));
+        project.style.display = matches ? '' : 'none';
+      });
+    });
+  }
+
+  /* --- Lightbox --- */
+  class Lightbox {
+    private overlay: HTMLElement;
+    private container: HTMLElement;
+    private imgEl: HTMLImageElement;
+    private caption: HTMLElement;
+    private number: HTMLElement;
+    private loader: HTMLElement;
+    private outerContainer: HTMLElement;
+    private images: Array<{ src: string; title: string }> = [];
+    private currentIndex = 0;
+
+    constructor() {
+      this.overlay = this.makeEl('div', 'lightboxOverlay');
+      this.container = this.makeEl('div', 'lightbox');
+      this.container.innerHTML = `
+        <div class="lb-outerContainer">
+          <div class="lb-container">
+            <img class="lb-image" src="" alt="" />
+            <div class="lb-loader"><a class="lb-cancel"></a></div>
+            <div class="lb-nav">
+              <a class="lb-prev" href="#" aria-label="Previous"></a>
+              <a class="lb-next" href="#" aria-label="Next"></a>
+            </div>
+          </div>
+        </div>
+        <div class="lb-dataContainer">
+          <div class="lb-data">
+            <div class="lb-details">
+              <span class="lb-caption"></span>
+              <span class="lb-number"></span>
+            </div>
+            <div class="lb-closeContainer">
+              <a class="lb-close" href="#" aria-label="Close"></a>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(this.overlay);
+      document.body.appendChild(this.container);
+
+      this.outerContainer = this.container.querySelector('.lb-outerContainer')!;
+      this.imgEl          = this.container.querySelector('.lb-image')!;
+      this.caption        = this.container.querySelector('.lb-caption')!;
+      this.number         = this.container.querySelector('.lb-number')!;
+      this.loader         = this.container.querySelector('.lb-loader')!;
+
+      this.bindEvents();
+    }
+
+    private makeEl(tag: string, cls: string): HTMLElement {
+      const el = document.createElement(tag);
+      el.className = cls;
+      el.style.display = 'none';
+      return el;
+    }
+
+    private bindEvents(): void {
+      this.overlay.addEventListener('click', () => this.close());
+
+      this.container.querySelector('.lb-prev')!.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.navigate(-1);
+      });
+      this.container.querySelector('.lb-next')!.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.navigate(1);
+      });
+      this.container.querySelector('.lb-close')!.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.close();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (this.overlay.style.display === 'none') return;
+        if (e.key === 'Escape') this.close();
+        if (e.key === 'ArrowLeft') this.navigate(-1);
+        if (e.key === 'ArrowRight') this.navigate(1);
+      });
+
+      document.addEventListener('click', (e) => {
+        const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-lightbox]');
+        if (!anchor) return;
+        e.preventDefault();
+
+        const group = anchor.dataset.lightbox!;
+        const anchors = Array.from(
+          document.querySelectorAll<HTMLAnchorElement>(`a[data-lightbox="${group}"]`)
+        );
+        this.images = anchors.map((a) => ({ src: a.href, title: a.title ?? '' }));
+        this.currentIndex = anchors.indexOf(anchor);
+        this.open();
+      });
+    }
+
+    private open(): void {
+      this.overlay.style.display = 'block';
+      this.container.style.display = 'flex';
+      this.loadImage();
+    }
+
+    private close(): void {
+      this.overlay.style.display = 'none';
+      this.container.style.display = 'none';
+    }
+
+    private navigate(dir: number): void {
+      this.currentIndex = (this.currentIndex + dir + this.images.length) % this.images.length;
+      this.loadImage();
+    }
+
+    private loadImage(): void {
+      this.loader.style.display = 'block';
+      this.imgEl.style.display = 'none';
+
+      const { src, title } = this.images[this.currentIndex];
+      this.caption.textContent = title;
+      this.number.textContent = `Image ${this.currentIndex + 1} of ${this.images.length}`;
+
+      const tmp = new Image();
+      tmp.onload = () => {
+        this.imgEl.src = src;
+        this.imgEl.style.display = 'block';
+        this.loader.style.display = 'none';
+        const scale = Math.min(
+          1,
+          (window.innerWidth - 80) / tmp.width,
+          (window.innerHeight - 140) / tmp.height
+        );
+        this.outerContainer.style.width  = Math.round(tmp.width  * scale) + 'px';
+        this.outerContainer.style.height = Math.round(tmp.height * scale) + 'px';
+        this.imgEl.style.width  = '100%';
+        this.imgEl.style.height = '100%';
+      };
+      tmp.onerror = () => { this.loader.style.display = 'none'; };
+      tmp.src = src;
+    }
+  }
+
+  initSticky('#sticky-bar');
+  initTagFilter();
+  new Lightbox();
+</script>

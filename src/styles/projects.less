@@ -1,0 +1,170 @@
+/*
+	CSS for projects page sreenaths.com
+*/
+
+.title-bar {
+	background-color: rgba(255, 255, 255, .5);
+	.description {
+		font-size:14px;
+	}
+}
+
+.tag-bar {
+	&.stuck {
+		background: url('/images/bg-bottom.jpg');
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+
+		box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+		z-index: 1000;
+
+		opacity:0.98;
+	}
+
+	ul{
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px 0px 0px -4px;
+
+		li{
+			display: inline;
+
+			.tag-name {
+				display: inline-block;
+				width: 0px;
+				overflow: hidden;
+				white-space: nowrap;
+
+				&:hover {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+.projects-list{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.project{
+	border-top: 1px dotted #555;
+
+	div.rounded{
+		border-radius: 10px;
+		border: 1px solid #333;
+	}
+
+	a div.rounded:hover{
+		opacity:0.8;
+	}
+
+	.gallery-wrapper {
+		display: none;
+
+		margin-top: 2px;
+
+		word-wrap: break-word;
+
+		.gallery-thumb{
+			display:inline-block;
+			width:64px;
+			height:64px;
+			margin-right: 5px;
+		}
+	}
+
+	.details {
+		position: relative;
+
+		.main-image{
+			display: inline-block;
+
+			width:160px;
+			height:160px;
+
+			margin-right: 15px;
+		}
+
+		.tags {
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			text-align: right;
+		}
+
+		.details-container{
+			display: inline-block;
+
+			vertical-align: top;
+
+			font-family: 'Istok Web', sans-serif;
+			font-size: 14px;
+			color: #888888;
+
+			.title {
+				display: inline;
+				font-size: 24px;
+			}
+
+			.gallery-wrapper {
+				display: inline;
+			}
+
+			.detail {
+				text-align: left;
+				.detail-type{
+					display: inline-block;
+					font-weight: bold;
+					width: 150px;
+				}
+				.detail-value {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.description{
+		font-size: 14px;
+		line-height: 25px;
+		color: #555555;
+		padding-top:10px;
+		text-indent:50px;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	.project {
+		.details {
+			.details-container {
+				margin-bottom: 10px;
+				.title {
+					font-size: 7vw;
+					margin-top: 10px;
+				}
+				.tags {
+					position: static;
+					text-align: left;
+					margin-bottom: 5px;
+				}
+				.gallery-wrapper {
+					display: none;
+				}
+				.detail {
+					font-size: 4vw;
+				}
+			}
+		}
+
+		.gallery-wrapper {
+			display: inline;
+		}
+	}
+}
