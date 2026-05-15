@@ -1,0 +1,23 @@
+# Git
+Commits should be of the following format:
+```
+<type>(<optional scope>): <description>
+
+[optional body]
+```
+
+- Keep commits small and focused.
+- Do not add "Made-with: Cursor".
+- Commit messages should explain why its being done, not what its doing.
+
+The type is one of the following:
+- feat: A new feature
+- fix: A bug fix
+- chore: A chore (not user-facing)
+- docs: Documentation changes
+- refactor: A code refactor
+- test: A test change
+- perf: A performance improvement
+- style: A style change
+- build: A build change
+- ci: A CI change
