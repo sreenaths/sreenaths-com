@@ -24,17 +24,10 @@ const navLinks = [
     <meta name="description" content="Sreenath Somarajapuram - Software Engineer" />
     <title>{title}</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="prefetch" href="/images/loader.gif" />
     <link rel="prefetch" href="/images/bg-header.jpg" />
   </head>
 
   <body class={`landscape ${bodyClass}`}>
-
-    <div class="loading-msg">
-      <img src="/images/ss.png" alt="" />
-      Loading<br />
-      <img src="/images/loader.gif" alt="" />
-    </div>
 
     <div class="main-container">
 
@@ -74,8 +67,7 @@ const navLinks = [
 </html>
 
 <script>
-  import { initLoaderAnim, initScrollTop } from '../scripts/loader';
+  import { initScrollTop } from '../scripts/loader';
 
-  initLoaderAnim();
   initScrollTop();
 </script>

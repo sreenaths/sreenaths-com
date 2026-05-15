@@ -14,8 +14,6 @@ export function initiateImgParallax(container: HTMLElement): void {
     image.style.transition = `left ${PARALLAX_DURATION}ms linear`;
   });
 
-  container.style.visibility = 'hidden';
-
   function animateParallax(mX: number): void {
     const xPos = mX - container.getBoundingClientRect().left;
     const mouseXFactor = Math.round((xPos / container.offsetWidth) * 10);
@@ -32,10 +30,8 @@ export function initiateImgParallax(container: HTMLElement): void {
 
   function onLoad(): void {
     setTimeout(() => {
-      container.style.visibility = 'visible';
-      container.style.opacity = '0';
-      container.style.transition = 'opacity 0.5s ease';
       animateParallax(container.getBoundingClientRect().left + container.offsetWidth / 2);
+      container.style.transition = 'opacity 0.5s ease';
       requestAnimationFrame(() => {
         container.style.opacity = '1';
       });
