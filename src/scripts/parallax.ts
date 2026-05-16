@@ -29,13 +29,14 @@ export function initiateImgParallax(container: HTMLElement): void {
   });
 
   function onLoad(): void {
+    container.style.transition = 'opacity 0.5s ease';
+    requestAnimationFrame(() => {
+      container.style.opacity = '1';
+    });
+    // Let initial positions paint before sliding to center
     setTimeout(() => {
       animateParallax(container.getBoundingClientRect().left + container.offsetWidth / 2);
-      container.style.transition = 'opacity 0.5s ease';
-      requestAnimationFrame(() => {
-        container.style.opacity = '1';
-      });
-    }, 550);
+    }, 100);
   }
 
   if (document.readyState === 'complete') {
