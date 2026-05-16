@@ -167,7 +167,7 @@
 			"link": "http://sreenaths.com/bouncingball/",
 			"tags": ["personal","html","css","js"],
 			"technologies": "HTML5, CSS3, JavaScript",
-			"description": "A small weekend project to quench my thirst for HTML5. The project created a highly scalable miniature collision system that can handle any number of interacting circles. The calculations are in two dimensions, and can be extended to handle any shapes.",
+			"description": "A personal exploration of browser physics using regular DOM elements. The project implements a scalable 2D collision system capable of handling an arbitrary number of simultaneously interacting circular bodies. The underlying math is dimension-agnostic and can be extended to support non-circular shapes.",
 			"screens": ["images/projects/bb/ss2","images/projects/bb/ss1"],
 			"company": null
 		},
