@@ -6,6 +6,7 @@
 	text-align: center;
 	height: 600px;
 	opacity: 0;
+	overflow: hidden;
 
 	.inner-block {
 		width: 1024px;
@@ -27,17 +28,36 @@
 		margin-bottom: 10px;
 	}
 	.company-logos {
+		text-align: center;
 		a {
+			display: inline-block;
 			margin: 10px 30px 10px 30px;
 			img {
-				padding: 10px 0 10px 0;
 				vertical-align: middle;
+				padding: 10px 0;
+				width: auto;
 			}
+			img.logo-apache   { height: 100px; }
+			img.logo-cloudera { height: 45px;  }
+			img.logo-hue      { height: 45px;  }
 			&:hover {
 				opacity:0.8;
-				filter:alpha(opacity=80);
 			}
 		}
+
+	@media only screen and (max-width: 600px) {
+		a {
+			display: block;
+		}
+		a img {
+			display: block;
+			margin: 0 auto;
+			height: auto !important;
+		}
+		a img.logo-apache   { max-width: 200px; }
+		a img.logo-cloudera { max-width: 260px; }
+		a img.logo-hue      { max-width: 220px; }
+	}
 	}
 }
 

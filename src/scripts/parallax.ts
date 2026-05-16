@@ -4,7 +4,10 @@ export function initiateImgParallax(container: HTMLElement): void {
   const PARALLAX_DURATION = 50;
   const images = Array.from(container.querySelectorAll<HTMLElement>('.inner-block > div'));
 
-  if (isMobile()) return;
+  if (isMobile()) {
+    container.style.opacity = '1';
+    return;
+  }
 
   images.forEach((image, index) => {
     const dataX = parseInt(image.dataset.x ?? '0');
