@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/home.less';
+
+const yearsOfExperience = new Date().getFullYear() - 2008;
 ---
 
 <Layout title="Sreenath Somarajapuram" bodyClass="home-page">
@@ -33,12 +35,15 @@ import '../styles/home.less';
       <div class="center">
         <div class="sub-heading">My Current Assignments</div>
         <div class="company-logos">
-          <a href="https://gethue.com/"><img height="80" src="/images/hue.svg" alt="Hue" /></a>
-          <a href="https://www.cloudera.com/"><img height="100" src="/images/cloudera.png" alt="Cloudera" /></a>
+          <a href="https://gethue.com/"><img height="45" src="/images/hue.svg" alt="Hue" /></a>
+          <a href="https://www.cloudera.com/"><img height="45" src="/images/cloudera.png" alt="Cloudera" /></a>
           <a href="http://apache.org/"><img height="100" src="/images/apache.png" alt="Apache" /></a>
         </div>
         <div class="v-padding description">
-          As a Software Engineer at Cloudera, I'm currently working on the UI for <a class="hover-black" href="https://gethue.com/">Hue</a> — the open source SQL Assistant for Databases &amp; Data Warehouses. Hue makes it easy to query, explore, and share data across multiple database engines through an intelligent and interactive interface.
+          Software professional with over {yearsOfExperience} years of industry experience, preceded by six years of freelance work designing and developing innovative web, mobile, desktop, and enterprise applications. As a member of the Apache Software Foundation, I have devoted a substantial portion of the past decade to working with open-source big data platforms, spanning on-premise clusters and public cloud environments.
+          <br />
+          <br />
+          Since 2022, I have been conducting research and development in the field of text-to-SQL generation and related AI-driven natural language interfaces.
         </div>
       </div>
     </div>
