@@ -277,6 +277,11 @@ a.button {
 			.menu {
 				position: static;
 				margin-top: 10px;
+				text-align: center;
+
+				a:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 	}
@@ -429,6 +434,25 @@ a.button {
 				width: 50%;
 
 				margin-bottom: -25px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.about-page {
+		.title-bar {
+			.sub-heading, .description {
+				width: 100%;
+			}
+		}
+		.facts-bar {
+			.sub-heading, .description {
+				width: 100%;
+				font-size: 14px;
+			}
+			.super-heros {
+				width: 100%;
 			}
 		}
 	}
