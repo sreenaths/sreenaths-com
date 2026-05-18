@@ -82,12 +82,13 @@ const tagList = Object.values(tags).filter((tag) => tag.count > 0);
     <div>
       <div id="sticky-bar" class="outer-block tag-bar">
         <div class="inner-block v-padding">
-          <div class="sub-heading">Tags</div>
+          <div class="sub-heading">Filters</div>
           <ul>
             {tagList.map((tag) => (
               <li>
                 <a
                   href="#"
+                  title={tag.displayName}
                   class={`button ${tag.name}`}
                   data-tag={tag.name}
                 >

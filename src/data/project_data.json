@@ -20,18 +20,6 @@
 			"displayName": "PHP",
 			"iconUrl": "images/techIcons/small/php.png"
 		},
-		"stage3d":{
-			"displayName": "Stage3D",
-			"iconUrl": "images/techIcons/small/stage3d.png"
-		},
-		"flare3d":{
-			"displayName": "Flare3D",
-			"iconUrl": "images/techIcons/small/flare3d.png"
-		},
-		"hbase":{
-			"displayName": "HBase",
-			"iconUrl": "images/techIcons/small/hbase.png"
-		},
 		"flash":{
 			"displayName": "Flash",
 			"iconUrl": "images/techIcons/small/flash.png"
@@ -87,10 +75,6 @@
 		"games":{
 			"displayName": "Games",
 			"iconUrl": "images/techIcons/small/games.png"
-		},
-		"starling":{
-			"displayName": "Starling Framework",
-			"iconUrl": "images/techIcons/small/starling.png"
 		}
 	},
 	"projects": [
@@ -139,7 +123,7 @@
 			"chrono": "2013",
 			"image": "images/projects/hs/main.jpg",
 			"link": "http://www.facebook.com/hiddenshadowsgame",
-			"tags": ["games","as3","starling","corporate"],
+			"tags": ["games","as3","corporate"],
 			"technologies": "AS3, Starling framework",
 			"description": "Hidden Shadows is the latest game from Zynga in the hidden objects genre. The game is a sequel to Hidden Chronicles. The game is a supernatural crime thriller in which you play the role of Michael Alder, a young executive, to solve the mysteries behind murders in Gracetown. My team had built three key features of the game, and was also working on numerous other modules. We were also in charge of solving all UI-related technical blockers.",
 			"screens": ["images/projects/hs/ss1","images/projects/hs/ss2","images/projects/hs/ss3","images/projects/hs/ss4","images/projects/hs/ss5","images/projects/hs/ss6","images/projects/hs/ss7"],
@@ -152,7 +136,7 @@
 			"chrono": "2013",
 			"image": "images/projects/starlingui/main.jpg",
 			"link": null,
-			"tags": ["as3","starling","personal"],
+			"tags": ["as3","personal"],
 			"technologies": "AS3, Starling framework",
 			"description": "Starling UI is an extension for the Starling framework with better UI components. It was started as my personal project, and now it's an inseparable part of our latest game, Hidden Shadows. The extension includes viewport, lossless text field, masked display container, rounded progress bars, scroll panes, image loader, tiling systems, layering composite, and more.",
 			"screens": ["images/projects/starlingui/ss1","images/projects/starlingui/ss2","images/projects/starlingui/ss3"],
@@ -216,7 +200,7 @@
 			"chrono": "2011-2012",
 			"image": "images/projects/craft/main.jpg",
 			"link": null,
-			"tags": ["games","as3","flash","stage3d","flare3d","unity"],
+			"tags": ["games","as3","flash","unity"],
 			"technologies": "AS3 with Stage3D and Flare3D, Flash, Unity",
 			"description": "Our team created a full 3D version of Craft Iso. Prototypes were created both in Unity and Flash. My main contribution went into an engine named Cube. Cube was built on Flare3D and also directly communicated with Stage3D for performance-intensive work.",
 			"screens": ["images/projects/craft/ss1","images/projects/craft/ss2"],
@@ -241,7 +225,7 @@
 			"chrono": "2011",
 			"image": "images/projects/z.jpg",
 			"link": null,
-			"tags": ["php","hbase"],
+			"tags": ["php"],
 			"technologies": "PHP, AS3, JavaScript, HBase",
 			"description": "Greyhound provides a set of technologies and Game Mechanics APIs that improve server efficiency. It was working at the core of all new Zynga games including FarmVille 2.",
 			"screens": [],
